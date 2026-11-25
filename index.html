@@ -15,6 +15,9 @@
 <title>Thierry Garot</title>
 <meta name="description" content="Thierry Garot, entrepreneur depuis 25 ans, conférencier et créateur de Zone de génie, getLinora et Sillaj. Je révèle ce que vous faites de mieux, puis je le fais savoir, sans jamais forcer.">
 <link rel="canonical" href="https://thierrygarot.fr/">
+<link rel="alternate" hreflang="fr" href="https://thierrygarot.fr/">
+<link rel="alternate" hreflang="en" href="https://thierrygarot.fr/en/">
+<link rel="alternate" hreflang="x-default" href="https://thierrygarot.fr/">
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Thierry Garot">
 <meta property="og:description" content="Entrepreneur, conférencier, créateur de Zone de génie, getLinora et Sillaj.">
@@ -183,7 +186,7 @@ footer a{font-weight:700}
 @media(max-width:600px){nav .links{gap:2px 14px}nav .links a{font-size:14px}.fig{min-height:560px}.family .fig{min-height:260px}.gen article{grid-template-columns:minmax(0,1fr);gap:4px}.path div{grid-template-columns:minmax(0,1fr);gap:2px}}
 .tabbar{display:none}
 @media(max-width:600px){
-nav[aria-label="Navigation principale"] .links{display:none}
+nav[aria-label="Navigation principale"] .links a:not(.lang){display:none}
 nav[aria-label="Navigation principale"]{position:static;padding-top:max(12px,env(safe-area-inset-top))}
 .tabbar{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));position:fixed;top:auto;left:0;right:0;bottom:0;z-index:20;gap:0;background:rgba(12,16,51,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid rgba(255,255,255,.08);padding:6px 4px max(8px,env(safe-area-inset-bottom))}
 .tabbar a{display:flex;flex-direction:column;align-items:center;gap:3px;min-height:48px;justify-content:center;color:#d8dbff;text-decoration:none;font-size:13px;font-weight:700}
@@ -208,6 +211,7 @@ html{scroll-padding-top:16px}
 .fcard.nl span:not(.k):not(.go){color:#c9ccf5}
 .fcard.nl .go{background:var(--orange);color:#1a0e00}
 @media(max-width:900px){.follow .fgrid{grid-template-columns:minmax(0,1fr)}}
+nav .links a.lang{border:1.5px solid rgba(255,255,255,.4);border-radius:999px;padding:4px 12px;color:#fff}
 /* --- Maturité : rondeur, air, vérité --- */
 h1,h2,h3{font-weight:500;letter-spacing:-.012em;line-height:1.1;font-variation-settings:"SOFT" 100,"opsz" 96}
 h2{font-size:clamp(32px,4vw,46px)}
@@ -265,6 +269,7 @@ nav .brand b{font-style:italic;font-weight:500}
     <a href="articles/">Articles</a>
     <a href="#roman">Mon roman</a>
     <a href="#contact">Contact</a>
+    <a class="lang" href="en/" hreflang="en" lang="en">EN</a>
   </div>
 </nav>
 
