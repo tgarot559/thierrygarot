@@ -23,7 +23,7 @@
 <meta property="og:image" content="https://thierrygarot.fr/img/og-thierry-garot.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Thierry Garot","alternateName":"Thierry Hamdan Garot","url":"https://thierrygarot.fr/","image":"https://thierrygarot.fr/img/thierry-garot.jpg","birthPlace":"Abidjan","jobTitle":"Entrepreneur, conférencier","description":"Entrepreneur depuis 25 ans, conférencier, créateur de Zone de génie, getLinora et Sillaj. Engagé pour l'accessibilité et l'inclusion du handicap.","knowsAbout":["LinkedIn","Prospection commerciale","Accessibilité numérique","European Accessibility Act","Partenariats bancaires","Entrepreneuriat"],"award":"Top 100 Handicap France","alumniOf":{"@type":"CollegeOrUniversity","name":"ESGCI"},"sameAs":["https://www.linkedin.com/in/thierry-garot","https://votrezonedegenie.fr","https://getlinora.fr","https://sillaj.me"],"founder":[{"@type":"Organization","name":"Zone de génie","url":"https://votrezonedegenie.fr"},{"@type":"Organization","name":"getLinora","url":"https://getlinora.fr"},{"@type":"Organization","name":"Sillaj","url":"https://sillaj.me"}]}
+{"@context":"https://schema.org","@type":"Person","name":"Thierry Garot","alternateName":"Thierry Hamdan Garot","url":"https://thierrygarot.fr/","image":"https://thierrygarot.fr/img/thierry-garot.jpg","birthPlace":"Abidjan","jobTitle":"Entrepreneur, conférencier","description":"Entrepreneur depuis 25 ans, conférencier, créateur de Zone de génie, getLinora et Sillaj. Engagé pour l'accessibilité et l'inclusion du handicap.","knowsAbout":["LinkedIn","Prospection commerciale","Accessibilité numérique","European Accessibility Act","Partenariats bancaires","Entrepreneuriat"],"award":"Top 100 Handicap France","alumniOf":{"@type":"CollegeOrUniversity","name":"ESGCI"},"sameAs":["https://www.linkedin.com/in/thierry-garot","https://votrezonedegenie.fr","https://getlinora.fr","https://sillaj.me","https://inclusio-formation.com","https://www.amazon.fr/dp/B0FYFWJ9XP"],"founder":[{"@type":"Organization","name":"Zone de génie","url":"https://votrezonedegenie.fr"},{"@type":"Organization","name":"getLinora","url":"https://getlinora.fr"},{"@type":"Organization","name":"Sillaj","url":"https://sillaj.me"},{"@type":"Organization","name":"Inclusio Formation","url":"https://inclusio-formation.com"}]}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..700,100;1,9..144,400..700,100&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
@@ -193,6 +193,21 @@ body{padding-bottom:calc(74px + env(safe-area-inset-bottom))}
 html{scroll-padding-top:16px}
 }
 
+[hidden]{display:none!important}
+.realcover{display:block;max-width:260px;width:100%;border-radius:10px;overflow:hidden;box-shadow:14px 18px 0 rgba(0,0,0,.35)}
+.realcover img{width:100%;height:auto;display:block}
+.btn.amz{margin-top:8px;background:var(--orange);color:#1a0e00}
+.follow .fgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:22px}
+.fcard{display:flex;flex-direction:column;gap:10px;padding:26px 22px;border-radius:24px;background:var(--cream);text-decoration:none;border:2px solid transparent;transition:border-color .2s}
+.fcard:hover,.fcard:focus-visible{border-color:var(--orange)}
+.fcard .k{font-size:14px;font-weight:800;color:var(--orange)}
+.fcard b{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:23px;line-height:1.2}
+.fcard span:not(.k):not(.go){color:var(--soft);font-size:16px}
+.fcard .go{margin-top:auto;align-self:flex-start;background:var(--navy);color:#fff;font-weight:800;font-size:15px;padding:10px 18px;border-radius:999px}
+.fcard.nl{background:var(--navy);color:#fff}
+.fcard.nl span:not(.k):not(.go){color:#c9ccf5}
+.fcard.nl .go{background:var(--orange);color:#1a0e00}
+@media(max-width:900px){.follow .fgrid{grid-template-columns:minmax(0,1fr)}}
 /* --- Maturité : rondeur, air, vérité --- */
 h1,h2,h3{font-weight:500;letter-spacing:-.012em;line-height:1.1;font-variation-settings:"SOFT" 100,"opsz" 96}
 h2{font-size:clamp(32px,4vw,46px)}
@@ -369,7 +384,7 @@ nav .brand b{font-style:italic;font-weight:500}
         <li>Conférence en entreprise : « Une équipe aussi a sa zone de génie ».</li>
         <li>Intervention de type TEDx à l'AKAE Business School de Bordeaux.</li>
         <li>Prise de parole à la Seine Musicale, à Paris.</li>
-        <li>Expert de l'accessibilité numérique (RGAA, European Accessibility Act).</li>
+        <li>Expert de l'accessibilité numérique (RGAA, European Accessibility Act), avec <a href="https://inclusio-formation.com" style="color:#ffcfa8">Inclusio Formation</a>.</li>
       </ul>
       <p style="margin-top:14px;color:#d6d9ff">Je me définis comme un transmetteur. Ce que j'ai appris en tombant, je préfère le partager.</p>
     </aside>
@@ -390,7 +405,9 @@ nav .brand b{font-style:italic;font-weight:500}
 
 <section class="band book" id="roman" aria-labelledby="roman-t">
   <div class="wrap bgrid">
-    <div class="cover" aria-hidden="true">
+    <div class="covwrap">
+    <a class="realcover" href="https://www.amazon.fr/dp/B0FYFWJ9XP" aria-label="Voir 2037, l'année où tout a changé sur Amazon"><img src="https://m.media-amazon.com/images/I/812EzGQIXFL._SL600_.jpg" alt="Couverture du roman 2037, l'année où tout a changé, de Thierry Garot" width="400" height="600" loading="lazy" onerror="this.parentNode.hidden=true;this.parentNode.nextElementSibling.hidden=false"></a>
+    <div class="cover" aria-hidden="true" hidden>
       <div class="spine"></div>
       <div class="face">
         <span class="au">Thierry Garot</span>
@@ -399,10 +416,23 @@ nav .brand b{font-style:italic;font-weight:500}
         <svg viewBox="0 0 200 60" preserveAspectRatio="none"><path d="M0,40 C40,20 70,55 110,32 S170,18 200,30" fill="none" stroke="#F97316" stroke-width="3"/></svg>
       </div>
     </div>
+    </div>
     <div>
       <h2 id="roman-t">2037, l'année où tout a changé</h2>
       <p class="lead">Mon premier roman. De la science-fiction, écrite par un entrepreneur qui passe ses journées à imaginer ce qui n'existe pas encore.</p>
       <p>Créer une entreprise ou écrire un roman, au fond, c'est le même geste : regarder plus loin que ce qu'on voit, et y emmener les autres.</p>
+      <a class="btn amz" href="https://www.amazon.fr/dp/B0FYFWJ9XP">Lire 2037, disponible sur Amazon</a>
+    </div>
+  </div>
+</section>
+
+<section class="band follow" aria-labelledby="follow-t">
+  <div class="wrap">
+    <h2 id="follow-t">Restons en lien</h2>
+    <div class="fgrid">
+      <a class="fcard" href="https://www.linkedin.com/in/thierry-garot"><span class="k">LinkedIn</span><b>Abonnez-vous à mon compte LinkedIn</b><span>32 000 personnes me suivent déjà. J'y partage ce que j'apprends, sans filtre.</span><span class="go">M'abonner</span></a>
+      <a class="fcard nl" href="https://www.linkedin.com/newsletters/ouvrir-la-porte-7527429431049584640/"><span class="k">Newsletter</span><b>Recevez « Ouvrir la porte »</b><span>Ma newsletter LinkedIn du mardi, déjà lue par plus de 3 000 abonnés.</span><span class="go">Recevoir la newsletter</span></a>
+      <a class="fcard" href="https://inclusio-formation.com"><span class="k">Inclusio Formation</span><b>Le handicap et l'accessibilité, en entreprise</b><span>Je sensibilise les équipes au handicap, à l'accessibilité et à l'inclusion. L'accessibilité est la première des libertés.</span><span class="go">inclusio-formation.com</span></a>
     </div>
   </div>
 </section>
@@ -424,7 +454,7 @@ nav .brand b{font-style:italic;font-weight:500}
   <div class="wrap">
     <span>Fait par Thierry, au bord de l'Atlantique.</span>
     <span class="inst"><button type="button" id="installBtn">Installer l'app sur mon téléphone</button><small id="installTip" hidden>Sur iPhone : touchez Partager, puis « Sur l'écran d'accueil ». Sur Android : menu ⋮, puis « Installer l'application ».</small></span>
-    <span><a href="https://votrezonedegenie.fr">Zone de génie</a> · <a href="https://getlinora.fr">getLinora</a> · <a href="https://sillaj.me">Sillaj</a></span>
+    <span><a href="https://votrezonedegenie.fr">Zone de génie</a> · <a href="https://getlinora.fr">getLinora</a> · <a href="https://sillaj.me">Sillaj</a> · <a href="https://inclusio-formation.com">Inclusio Formation</a> · <a href="https://www.amazon.fr/dp/B0FYFWJ9XP">2037</a></span>
   </div>
 </footer>
 
