@@ -5,14 +5,14 @@
 body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.7 Manrope,system-ui,sans-serif;overflow-x:clip}
 a{color:inherit}
 nav{background:var(--navy2);color:#fff;display:flex;flex-wrap:wrap;align-items:center;gap:6px 22px;padding:12px max(5vw,16px)}
-nav .brand{font-family:Anton,Impact,sans-serif;font-size:20px;text-decoration:none;margin-right:auto}
+nav .brand{font-family:Fraunces,Georgia,serif;font-size:20px;text-decoration:none;margin-right:auto}
 nav .brand b{color:var(--orange);font-weight:400}
 nav a.l{text-decoration:none;font-size:15px;font-weight:700;color:#d8dbff;padding:6px 0}
 nav a.l:hover,nav a.l:focus-visible{color:var(--orange)}
 header{background:var(--navy);color:#fff;padding:clamp(36px,6vw,80px) max(5vw,16px) clamp(28px,4vw,48px)}
 header .in,main,.list{max-width:760px;margin:0 auto}
 header .cat{color:var(--orange);font-weight:800;font-size:15px}
-h1,h2{font-family:Anton,Impact,sans-serif;font-weight:400;line-height:1.08;text-wrap:balance;margin:0}
+h1,h2{font-family:Fraunces,Georgia,serif;font-weight:400;line-height:1.08;text-wrap:balance;margin:0}
 h1{font-size:clamp(36px,5.4vw,56px);margin:10px 0 14px}
 header p{color:#c9ccf5;margin:0;font-size:17px}
 main{padding:clamp(28px,4vw,56px) max(5vw,16px)}
@@ -29,3 +29,9 @@ blockquote{margin:26px 0;padding:6px 0 6px 20px;border-left:4px solid var(--oran
 .list a.it:hover b,.list a.it:focus-visible b{color:var(--orange)}
 footer{background:var(--cream);padding:24px max(5vw,16px);font-size:15px;text-align:left}
 footer div{max-width:760px;margin:0 auto}
+
+h1,h2{font-weight:500;letter-spacing:-.01em;font-variation-settings:"SOFT" 100,"opsz" 72;line-height:1.12}
+nav .brand{font-weight:600}
+header{border-radius:0 0 32px 32px}
+blockquote{border-left:0;background:var(--cream);border-radius:20px;padding:20px 24px;font-family:Fraunces,Georgia,serif;font-style:italic;font-weight:400;font-size:22px}
+.list a.it{border-radius:18px;padding:22px 20px;border:1px solid var(--line);margin-bottom:12px}
