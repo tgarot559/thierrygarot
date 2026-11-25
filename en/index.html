@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2212%22 fill=%22%23141a5c%22/%3E%3Cpath d=%22M10 44 C24 20 40 52 54 22%22 fill=%22none%22 stroke=%22%23F97316%22 stroke-width=%227%22 stroke-linecap=%22round%22/%3E%3C/svg%3E">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Thierry Garot">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#0c1033">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<title>Thierry Garot</title>
+<meta name="description" content="Thierry Garot, entrepreneur for 25 years, speaker and founder of Zone de génie, getLinora and Sillaj. I reveal what you do best, then I help you make it known, without ever forcing it.">
+<link rel="canonical" href="https://thierrygarot.fr/en/">
+<link rel="alternate" hreflang="fr" href="https://thierrygarot.fr/">
+<link rel="alternate" hreflang="en" href="https://thierrygarot.fr/en/">
+<link rel="alternate" hreflang="x-default" href="https://thierrygarot.fr/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Thierry Garot">
+<meta property="og:description" content="Entrepreneur, speaker, founder of Zone de génie, getLinora and Sillaj.">
+<meta property="og:url" content="https://thierrygarot.fr/en/">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://thierrygarot.fr/img/og-thierry-garot.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Thierry Garot","alternateName":"Thierry Hamdan Garot","url":"https://thierrygarot.fr/en/","image":"https://thierrygarot.fr/img/thierry-garot.jpg","birthPlace":"Abidjan","jobTitle":"Entrepreneur, speaker","description":"Entrepreneur for 25 years, speaker, founder of Zone de génie, getLinora and Sillaj. Committed to accessibility and disability inclusion.","knowsAbout":["LinkedIn","Business prospecting","Digital accessibility","European Accessibility Act","Bank partnerships","Entrepreneurship"],"award":"Top 100 Handicap France","alumniOf":{"@type":"CollegeOrUniversity","name":"ESGCI"},"sameAs":["https://www.linkedin.com/in/thierry-garot","https://votrezonedegenie.fr","https://getlinora.fr","https://sillaj.me","https://inclusio-formation.com","https://www.amazon.fr/dp/B0FYFWJ9XP"],"founder":[{"@type":"Organization","name":"Zone de génie","url":"https://votrezonedegenie.fr"},{"@type":"Organization","name":"getLinora","url":"https://getlinora.fr"},{"@type":"Organization","name":"Sillaj","url":"https://sillaj.me"},{"@type":"Organization","name":"Inclusio Formation","url":"https://inclusio-formation.com"}]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..700,100;1,9..144,400..700,100&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+/* VOICE occasion : un portrait chaleureux et assumé, à la première personne
+   IDEA une carte de navigation : le fil orange de sa vie, d'Abidjan à l'Atlantique
+   PICTURE la route orange qui relie six escales, sur un fond d'océan nuit
+   COLOUR nuit marine (socle commun), orange fil rouge, crème ; chaque création garde sa couleur
+   TYPE Fraunces doux (rond, mûr) + Manrope
+   LAYOUT nom et promesse en haut, carte pleine largeur dessous ; sur mobile la route devient verticale */
+:root{color-scheme:light dark;
+--bg:light-dark(#ffffff,#0c1033);
+--ink:light-dark(#141a3c,#eef0ff);
+--soft:light-dark(#4a5072,#b9bde0);
+--line:light-dark(#e3e5f0,#262c5c);
+--navy:#141a5c;--navy2:#0c1033;
+--orange:#F97316;
+--cream:light-dark(#FFF7ED,#1a1640);
+--zdg:#FFF200;--zdgpink:#FF2BD6;--zdgnavy:#14117A;
+--lin:#2563EB;--sil:#0E7490;--silsea:#7dd3e8}
+:root[data-theme=light]{color-scheme:light}
+:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-padding-top:72px;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 Manrope,system-ui,sans-serif;overflow-x:clip}
+a{color:inherit}
+img{max-width:100%}
+.band{padding-block:clamp(36px,5vw,80px);padding-left:max(5vw,16px,env(safe-area-inset-left,0px));padding-right:max(5vw,16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1240px;margin:0 auto}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:400;line-height:1.05;letter-spacing:.005em;text-wrap:balance;margin:0}
+h2{font-size:clamp(34px,4.6vw,52px);margin-bottom:18px}
+h3{font-size:26px}
+p{margin:0 0 14px;max-width:66ch}
+.lead{font-size:clamp(18px,2vw,21px);color:var(--soft)}
+nav{position:sticky;top:0;z-index:5;background:var(--navy2);color:#fff;display:flex;flex-wrap:wrap;align-items:center;gap:6px 22px;padding:12px max(5vw,16px)}
+nav .brand{font-family:Fraunces,Georgia,serif;font-size:20px;text-decoration:none;margin-right:auto}
+nav .brand b{color:var(--orange);font-weight:400}
+nav .links{display:flex;flex-wrap:wrap;gap:4px 18px}
+nav .links a{text-decoration:none;font-size:15px;font-weight:700;color:#d8dbff;padding:6px 0}
+nav .links a:hover,nav .links a:focus-visible{color:var(--orange)}
+.hero{background:radial-gradient(120% 90% at 80% 0%,#1f2878 0%,var(--navy) 45%,var(--navy2) 100%);color:#fff;padding-bottom:0}
+.hero .name{font-size:clamp(52px,9vw,112px);line-height:.98;letter-spacing:-.005em}
+.hero .name span{color:var(--orange)}
+.hero .promise{font-size:clamp(20px,2.4vw,27px);font-weight:700;margin:22px 0 8px;max-width:30ch;line-height:1.3}
+.hero .sub{color:#c9ccf5;max-width:56ch;margin-top:22px}
+.hero .row{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:28px;align-items:end}
+.me{display:grid;gap:20px;justify-items:start}
+.me img{width:clamp(150px,18vw,230px);height:auto;aspect-ratio:1;border-radius:50%;object-fit:cover;box-shadow:0 0 0 5px var(--orange),0 0 0 11px rgba(249,115,22,.22)}
+@media(max-width:900px){.me{grid-template-columns:auto minmax(0,1fr);align-items:center}.me img{width:120px}}
+@media(max-width:420px){.me{grid-template-columns:minmax(0,1fr)}}
+.hero .quote{border-left:3px solid var(--orange);padding:4px 0 4px 18px;color:#e9eaff;font-size:18px}
+.hero .quote em{display:block;font-style:normal;color:#9da2d8;font-size:14px;margin-top:6px}
+.fig{position:relative;min-height:360px;margin-top:26px}
+.fig>svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.fig text{font-family:Manrope,sans-serif}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(10em,1fr));gap:2px;background:var(--line);border-block:1px solid var(--line)}
+.stats div{background:var(--bg);padding:22px 18px}
+.stats strong{display:block;font-family:Fraunces,Georgia,serif;font-weight:400;font-size:clamp(34px,4vw,46px);line-height:1;color:var(--orange);white-space:nowrap}
+.stats span{font-size:15px;color:var(--soft)}
+.story{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px)}
+.gen{display:grid;gap:14px}
+.gen article{border-top:1px solid var(--line);padding-top:16px;display:grid;grid-template-columns:5.2em minmax(0,1fr);gap:14px}
+.gen .yr{font-family:Fraunces,Georgia,serif;font-size:26px;color:var(--orange);line-height:1.1}
+.gen h3{font-size:22px;margin-bottom:6px;font-family:Manrope,sans-serif;font-weight:800}
+.gen p{font-size:16px;color:var(--soft);margin:0}
+.motto{background:var(--orange);color:#1a0e00;border-radius:4px;padding:26px 24px;margin-top:22px}
+.motto p{font-family:Fraunces,Georgia,serif;font-size:clamp(24px,3vw,32px);line-height:1.15;margin:0;max-width:none}
+.motto small{display:block;margin-top:10px;font-size:15px;font-weight:700}
+.family{background:var(--cream)}
+.family .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:clamp(24px,4vw,56px);align-items:center}
+.family .fig{min-height:300px;margin:0}
+.strat{background:var(--navy2);color:#fff}
+.strat .lead{color:#c3c7f2}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:28px}
+.card{border-radius:6px;padding:26px 22px 24px;display:flex;flex-direction:column;gap:10px}
+.card .verb{font-family:Fraunces,Georgia,serif;font-size:clamp(40px,4.4vw,56px);line-height:1}
+.card h3{font-family:Manrope,sans-serif;font-weight:800;font-size:20px}
+.card p{font-size:16px;margin:0}
+.card .proof{font-size:15px;font-weight:700;padding-top:10px;border-top:1px solid currentColor;opacity:.92}
+.card a.go{margin-top:auto;display:inline-flex;align-items:center;gap:8px;min-height:44px;font-weight:800;text-decoration:none;padding:10px 16px;border-radius:999px;align-self:flex-start}
+.c1{background:var(--zdgnavy);color:#fff;box-shadow:inset 0 0 0 2px var(--zdgpink)}
+.c1 .verb{color:var(--zdg)}
+.c1 a.go{background:var(--zdg);color:var(--zdgnavy)}
+.c2{background:#fff;color:#0f172a}
+.c2 .verb{color:var(--lin)}
+.c2 a.go{background:var(--lin);color:#fff}
+.c3{background:linear-gradient(170deg,#0b4f63,#08313f);color:#eafaff}
+.c3 .verb{color:var(--silsea)}
+.c3 a.go{background:var(--silsea);color:#06303c}
+.thread{display:flex;align-items:center;gap:12px;margin-top:22px;color:#c3c7f2;font-size:15px;flex-wrap:wrap}
+.thread i{flex:1 1 60px;height:3px;background:var(--orange);border-radius:3px;min-width:40px}
+.charter{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(24px,4vw,56px)}
+.charter ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.charter li{background:var(--bg);padding:18px 20px;display:grid;grid-template-columns:34px minmax(0,1fr);gap:14px;align-items:start}
+.charter li svg{width:30px;height:30px}
+.charter li b{display:block;font-size:18px}
+.charter li span{color:var(--soft);font-size:16px}
+.path{display:grid;gap:0}
+.path div{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:22px;padding:16px 0;border-top:1px solid var(--line)}
+.path .y{font-family:Fraunces,Georgia,serif;font-size:22px;color:var(--orange);white-space:nowrap;min-width:6.4em}
+.path b{font-size:18px}
+.path p{margin:4px 0 0;color:var(--soft);font-size:16px}
+.two{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:clamp(24px,4vw,56px)}
+.voice{background:var(--navy);color:#fff;border-radius:6px;padding:26px 24px;align-self:start}
+.voice h3{color:var(--orange);margin-bottom:12px}
+.voice ul{margin:0;padding-left:18px;color:#d6d9ff}
+.voice li{margin-bottom:8px}
+.arts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:22px}
+.art{display:flex;flex-direction:column;gap:10px;padding:22px;border:1px solid var(--line);border-radius:6px;text-decoration:none;min-height:180px;transition:border-color .2s}
+.art:hover,.art:focus-visible{border-color:var(--orange)}
+.art .d{font-size:14px;font-weight:700;color:var(--orange)}
+.art b{font-size:20px;line-height:1.3}
+.art .more{margin-top:auto;font-weight:700;font-size:15px;color:var(--soft)}
+.art.all{background:var(--navy);color:#fff;border-color:var(--navy)}
+.art.all .more{color:#c9ccf5}
+@media(max-width:900px){.arts{grid-template-columns:minmax(0,1fr)}.art{min-height:0}}
+.recs{background:var(--navy);color:#fff}
+.recs h2{color:#fff}.recs .lead{color:#c9ccf5}
+.rh{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap}
+.arr{display:flex;gap:10px}
+.arr button{width:48px;height:48px;border-radius:50%;border:2px solid #fff;background:transparent;color:#fff;font-size:22px;cursor:pointer}
+.arr button:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
+.rrail{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:24px 2px 18px}
+.rec{flex:0 0 min(420px,84vw);scroll-snap-align:start;margin:0;background:#fff;color:#141a3c;border-radius:6px;padding:26px 24px;display:flex;flex-direction:column;gap:16px;border-top:5px solid var(--orange)}
+.rec blockquote{margin:0;font-size:16px;line-height:1.6}
+.rec blockquote::before{content:"“";display:block;font-family:Fraunces,Georgia,serif;font-size:54px;line-height:.6;color:var(--orange);margin-bottom:6px}
+.rec figcaption{margin-top:auto;border-top:1px solid #e3e5f0;padding-top:12px}
+.rec b{display:block;font-size:16px}
+.rec span{font-size:14px;color:#4a5072}
+.allrec{color:#fff;font-weight:800}
+.book{background:var(--navy2);color:#fff}
+.book .lead{color:#c9ccf5}
+.bgrid{display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:center}
+.cover{position:relative;aspect-ratio:2/3;max-width:260px;width:100%;display:flex;filter:drop-shadow(14px 18px 0 rgba(0,0,0,.35))}
+.spine{width:16px;background:#a8470a;border-radius:3px 0 0 3px}
+.face{flex:1;background:linear-gradient(160deg,#1f2878,#0a0d2a);border-radius:0 4px 4px 0;padding:22px 18px;display:flex;flex-direction:column;position:relative;overflow:hidden;box-shadow:inset 0 0 0 1px rgba(255,255,255,.08)}
+.face .au{font-weight:800;font-size:14px;color:#c9ccf5}
+.face .yr2{font-family:Fraunces,Georgia,serif;font-size:clamp(64px,9vw,84px);line-height:1;color:var(--orange);margin-top:auto}
+.face .st{font-weight:700;font-size:15px;line-height:1.3;margin-top:6px}
+.face svg{position:absolute;left:0;right:0;top:34%;width:100%;height:60px}
+.contact{background:var(--orange);color:#1a0e00}
+.contact .grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:28px;align-items:center}
+.contact h2{font-size:clamp(38px,5.4vw,64px)}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:12px 22px;border-radius:999px;font-weight:800;text-decoration:none;background:#141a5c;color:#fff}
+.btn.alt{background:transparent;color:#1a0e00;box-shadow:inset 0 0 0 2px #1a0e00}
+.btn:focus-visible,.card a.go:focus-visible,nav a:focus-visible{outline:3px solid #fff;outline-offset:3px}
+footer{background:var(--cream);color:var(--ink);font-size:15px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:space-between}
+footer a{font-weight:700}
+.inst{display:flex;flex-direction:column;gap:6px;flex-basis:100%}
+.inst button{align-self:flex-start;min-height:44px;padding:10px 18px;border-radius:999px;border:2px solid var(--navy);background:transparent;color:var(--ink);font:800 15px Manrope,sans-serif;cursor:pointer}
+.inst button:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
+.inst small{font-size:14px;color:var(--soft);max-width:60ch}
+@media(display-mode:standalone){.inst{display:none}}
+@media(max-width:900px){.steps{grid-template-columns:minmax(0,1fr)}.hero .row,.story,.family .grid,.charter,.two,.contact .grid,.bgrid{grid-template-columns:minmax(0,1fr)}.cover{max-width:200px}}
+@media(max-width:600px){nav .links{gap:2px 14px}nav .links a{font-size:14px}.fig{min-height:560px}.family .fig{min-height:260px}.gen article{grid-template-columns:minmax(0,1fr);gap:4px}.path div{grid-template-columns:minmax(0,1fr);gap:2px}}
+.tabbar{display:none}
+@media(max-width:600px){
+nav[aria-label="Main navigation"] .links a:not(.lang){display:none}
+nav[aria-label="Main navigation"]{position:static;padding-top:max(12px,env(safe-area-inset-top))}
+.tabbar{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));position:fixed;top:auto;left:0;right:0;bottom:0;z-index:20;gap:0;background:rgba(12,16,51,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid rgba(255,255,255,.08);padding:6px 4px max(8px,env(safe-area-inset-bottom))}
+.tabbar a{display:flex;flex-direction:column;align-items:center;gap:3px;min-height:48px;justify-content:center;color:#d8dbff;text-decoration:none;font-size:13px;font-weight:700}
+.tabbar a:active,.tabbar a:focus-visible{color:var(--orange)}
+.tabbar svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+body{padding-bottom:calc(74px + env(safe-area-inset-bottom))}
+html{scroll-padding-top:16px}
+}
+
+[hidden]{display:none!important}
+.realcover{display:block;max-width:260px;width:100%;border-radius:10px;overflow:hidden;box-shadow:14px 18px 0 rgba(0,0,0,.35)}
+.realcover img{width:100%;height:auto;display:block}
+.btn.amz{margin-top:8px;background:var(--orange);color:#1a0e00}
+.follow .fgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:22px}
+.fcard{display:flex;flex-direction:column;gap:10px;padding:26px 22px;border-radius:24px;background:var(--cream);text-decoration:none;border:2px solid transparent;transition:border-color .2s}
+.fcard:hover,.fcard:focus-visible{border-color:var(--orange)}
+.fcard .k{font-size:14px;font-weight:800;color:var(--orange)}
+.fcard b{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:23px;line-height:1.2}
+.fcard span:not(.k):not(.go){color:var(--soft);font-size:16px}
+.fcard .go{margin-top:auto;align-self:flex-start;background:var(--navy);color:#fff;font-weight:800;font-size:15px;padding:10px 18px;border-radius:999px}
+.fcard.nl{background:var(--navy);color:#fff}
+.fcard.nl span:not(.k):not(.go){color:#c9ccf5}
+.fcard.nl .go{background:var(--orange);color:#1a0e00}
+@media(max-width:900px){.follow .fgrid{grid-template-columns:minmax(0,1fr)}}
+nav .links a.lang{border:1.5px solid rgba(255,255,255,.4);border-radius:999px;padding:4px 12px;color:#fff}
+/* --- Maturité : rondeur, air, vérité --- */
+h1,h2,h3{font-weight:500;letter-spacing:-.012em;line-height:1.1;font-variation-settings:"SOFT" 100,"opsz" 96}
+h2{font-size:clamp(32px,4vw,46px)}
+.lead{line-height:1.6}
+nav .brand{font-weight:600;font-size:21px}
+nav .brand b{font-style:italic;font-weight:500}
+.hero{background:radial-gradient(110% 80% at 85% 0%,#232c86 0%,var(--navy) 50%,var(--navy2) 100%);border-radius:0 0 40px 40px}
+.hero .name{font-size:clamp(36px,4.6vw,60px);line-height:1.1;font-weight:500;max-width:17ch}
+.hero .name span{font-style:italic;font-weight:500}
+.hero .promise{font-family:Fraunces,Georgia,serif;font-weight:400;font-style:italic;font-size:clamp(22px,2.4vw,28px);line-height:1.35;color:#fff;max-width:28ch}
+.me img{border-radius:32px;width:clamp(180px,22vw,280px);box-shadow:0 0 0 4px var(--orange),0 24px 60px rgba(0,0,0,.35)}
+.hero .quote{border-left:0;background:rgba(255,255,255,.07);border-radius:20px;padding:16px 20px;font-family:Fraunces,Georgia,serif;font-style:italic}
+.stats{gap:14px;background:transparent;border:0;padding:clamp(20px,3vw,36px) max(5vw,16px);max-width:1240px;margin:0 auto}
+.stats div{border-radius:22px;background:var(--cream);text-align:left}
+.stats strong{font-weight:500;color:var(--orange)}
+.motto{border-radius:24px;background:var(--navy);color:#fff}
+.motto p{font-weight:400;font-style:italic}
+.motto small{color:#ffcfa8}
+.gen article{border-top:0;background:var(--cream);border-radius:20px;padding:18px 20px}
+.gen .yr{font-weight:600}
+.family{border-radius:40px;margin:0 max(2vw,8px)}
+.strat{border-radius:40px;margin:clamp(16px,3vw,32px) max(2vw,8px)}
+.card{border-radius:26px}
+.card .verb{font-weight:500;font-style:italic}
+.card a.go,.btn{border-radius:999px}
+.thread i{border-radius:3px}
+.charter ol{border-radius:26px;gap:0;background:transparent;border:1px solid var(--line)}
+.charter li{border-bottom:1px solid var(--line)}
+.charter li:last-child{border-bottom:0}
+.recs{border-radius:40px;margin:clamp(16px,3vw,32px) max(2vw,8px)}
+.rec{border-radius:24px;border-top:0;box-shadow:inset 0 4px 0 var(--orange)}
+.rec blockquote::before{font-weight:600}
+.path div{border-top:0;background:var(--bg);border-radius:18px;padding:16px 18px;margin-bottom:8px;box-shadow:0 1px 0 var(--line)}
+.path .y{font-weight:600}
+.voice{border-radius:26px}
+.art{border-radius:22px}
+.book{border-radius:40px;margin:clamp(16px,3vw,32px) max(2vw,8px)}
+.face{border-radius:4px 14px 14px 4px}
+.contact{border-radius:40px 40px 0 0}
+.contact h2{font-weight:500}
+@media(max-width:600px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.stats div{padding:16px 14px}.hero{border-radius:0 0 28px 28px}.family,.strat,.recs,.book{border-radius:28px;margin-inline:6px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}#route path.trail{animation:none!important;stroke-dashoffset:0!important}}
+@keyframes draw{to{stroke-dashoffset:0}}
+</style>
+</head>
+<body>
+<nav aria-label="Main navigation">
+  <a class="brand" href="#top">Thierry <b>Garot</b></a>
+  <div class="links">
+    <a href="#histoire">My story</a>
+    <a href="#strategie">My approach</a>
+    <a href="#charte">My charter</a>
+    <a href="#avis">Testimonials</a>
+    <a href="#parcours">Career</a>
+    <a href="../articles/" hreflang="fr">Articles (FR)</a>
+    <a href="#roman">My novel</a>
+    <a href="#contact">Contact</a>
+    <a class="lang" href="../" hreflang="fr" lang="fr">FR</a>
+  </div>
+</nav>
+
+<header class="band hero" id="top">
+  <div class="wrap">
+    <div class="row">
+      <div>
+        <h1 class="name">I reveal what you do best. Then I make it known, <span>without ever forcing it.</span></h1>
+        
+        <p class="sub">Entrepreneur for 25 years, speaker, founder of Zone de génie, getLinora and Sillaj. Father of four. Based on the Atlantic coast of France.</p>
+      </div>
+      <div class="me">
+        <img src="../img/thierry-garot.jpg" width="560" height="560" alt="Portrait of Thierry Garot at his desk, smiling, round glasses, chin resting on his hand">
+        <p class="quote">“Half couscous, half foie gras, with an Englishman’s face.”<em>That is how I introduce myself. And it is true.</em></p>
+      </div>
+    </div>
+    <div class="fig" id="routeFig" role="img" aria-label="The thread of my life: Abidjan 1969, Périgueux 1976, Niort 2000, Thailand 2003, Paris 2016, the Atlantic 2026"><svg id="route"></svg></div>
+  </div>
+</header>
+
+<section class="stats" aria-label="Key figures">
+  <div><strong>25 years</strong><span>as an entrepreneur</span></div>
+  <div><strong>6 years</strong><span>testing everything on LinkedIn</span></div>
+  <div><strong>32,000</strong><span>LinkedIn followers</span></div>
+  <div><strong>30,000</strong><span>Instagram followers</span></div>
+  <div><strong>3,000</strong><span>newsletter readers</span></div>
+  <div><strong>Top 100</strong><span>Handicap France</span></div>
+</section>
+
+<section class="band" id="histoire">
+  <div class="wrap story">
+    <div>
+      <h2>Where I come from</h2>
+      <p class="lead">I was born in Treichville, Abidjan. As a child, I was never quite sure whether I was French, Ivorian or Kabyle. It took me a while to understand that this was exactly my strength.</p>
+      <p>For a long time, I set part of my story aside. Today I gladly sign Thierry Hamdan Garot. Hamdan was my grandfather’s first name. It is my middle name, and I am rather proud of it.</p>
+      <div class="motto"><p>“In the Garot family, we fall, but we get back up, and always with our heads held high.”</p><small>The family motto. It has never left me.</small></div>
+    </div>
+    <div class="gen">
+      <article><div class="yr">1911</div><div><h3>My grandfather, Hamdan</h3><p>Born in Greater Kabylia. He arrived in France at 14 with a single dictionary to learn French. A factory worker in Boulogne-Billancourt, then a gendarme in Algeria, he ended his career as a deputy public prosecutor.</p></div></article>
+      <article><div class="yr">1976</div><div><h3>My father</h3><p>Technical director of the Bata factory in Abidjan, he stood by his workers when they went on strike. He lost everything. We came back to France, to Périgueux, in December: I was 7. He then mended shoes for 30 years in his cobbler’s shop. That is where my sense of justice comes from.</p></div></article>
+      <article><div class="yr">40 years</div><div><h3>My mother</h3><p>A primary school teacher, from Africa to France. More than 2,000 children, by her own count. Discreet, gentle, always listening. I owe her my habit of listening before I speak.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="band family" aria-labelledby="famille">
+  <div class="wrap grid">
+    <div class="fig" role="img" aria-label="Two parents and four children, joined by an orange thread"><svg id="fam"></svg></div>
+    <div>
+      <h2 id="famille">Father of four adopted children</h2>
+      <p class="lead">In December 2003, in Thailand, we became the parents of four children at once. Overnight, there were six of us.</p>
+      <p>My wife and I then spent more than eight years as regional leads for the adoption organisation through which we had adopted. Eight départements in western France, regional meetings, and many future parents supported through the process.</p>
+      <p>This adventure taught me the heart of what I do today: seeing people for who they are, not for what is expected of them. And helping them find their place.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band strat" id="strategie">
+  <div class="wrap">
+    <h2>My approach: reveal, show, reach out</h2>
+    <p class="lead">My three ventures tell a single story. First, you discover what you do best. Then you show it. Finally, you reach out to the people who need it, courteously.</p>
+    <div class="steps">
+      <article class="card c1">
+        <div class="verb">Reveal</div>
+        <h3>Zone de génie</h3>
+        <p>In a 30-minute phone call, I put words to what you do better than anyone. For teams, I give the talk “A team has its zone of genius too”.</p>
+        <p class="proof">For you, your team, your leadership committee.</p>
+        <a class="go" href="https://votrezonedegenie.fr">votrezonedegenie.fr</a>
+      </article>
+      <article class="card c2">
+        <div class="verb">Show</div>
+        <h3>getLinora</h3>
+        <p>For independent hotels, châteaux and estates: a LinkedIn profile, offer and presence that bring in seminars and business stopovers.</p>
+        <p class="proof">€19,338 in seminars signed in 8 months for one hotel we work with.</p>
+        <a class="go" href="https://getlinora.fr">getlinora.fr</a>
+      </article>
+      <article class="card c3">
+        <div class="verb">Reach out</div>
+        <h3>Sillaj</h3>
+        <p>For freelancers and business leaders: every day, know who to contact on LinkedIn and what to say. Born by the ocean.</p>
+        <p class="proof">Every message leaves a trace.</p>
+        <a class="go" href="https://sillaj.me">sillaj.me</a>
+      </article>
+    </div>
+    <div class="thread"><span>One thread running through all three</span><i></i><span>the same charter, the same hand</span></div>
+  </div>
+</section>
+
+<section class="band" id="charte">
+  <div class="wrap charter">
+    <div>
+      <h2>My charter, the same everywhere</h2>
+      <p class="lead">Tools change, the way of doing things stays. Whether you come through Zone de génie, getLinora or Sillaj, these five commitments apply. They are my signature.</p>
+      <p>The people I work with have a way with words and hate being pushed. So do I. So I reach out to prospects the way you would welcome someone into your home.</p>
+    </div>
+    <ol id="engagements"></ol>
+  </div>
+</section>
+
+<section class="band recs" id="avis" aria-labelledby="avis-t">
+  <div class="wrap">
+    <div class="rh"><div><h2 id="avis-t">What people say</h2><p class="lead">Recommendations published on my LinkedIn profile, quoted word for word in their original language.</p></div><div class="arr"><button type="button" id="rPrev" aria-label="Previous recommendation">←</button><button type="button" id="rNext" aria-label="Next recommendation">→</button></div></div>
+    <div class="rrail" id="rrail" tabindex="0" aria-label="Recommendations"><figure class="rec"><blockquote>J&#x27;ai eu à plusieurs occasions le plaisir de travailler avec THIERRY GAROT. Les préparations sont sérieuses, le soucis du partage de savoir et d&#x27;expériences permanents. Au-delà de la qualité des conseils, des formations et des accompagnements qu&#x27;il prodigue, c&#x27;est la qualité humaine qui séduit et rassure. Tous les projets ou entreprises communes sont toujours réalisées avec une réelle ambition de partage et de bienveillance. Efficaces et humains, voilà les deux vertus qui caractérisent les collaborations fructueuses que j&#x27;ai poursuivies avec THIERRY GAROT. Je vous le recommande avec enthousiasme.</blockquote><figcaption><b>Thierry Watelet</b><span>Conférencier, formateur et auteur · avril 2020</span></figcaption></figure><figure class="rec"><blockquote>I worked with Thierry at Meilleurtaux on the launch of the SME lending offer. Thierry has the qualities of a business developer: creativity, large network (to test &amp; sell the concepts), structured person, risk appetite, passion, easy contact. I would certainly recommend him for such a similar role in a scale-up.</blockquote><figcaption><b>Nicolas Eich</b><span>Son responsable direct chez Meilleurtaux · février 2021</span></figcaption></figure><figure class="rec"><blockquote>Thierry est un expert, c&#x27;est le moins que l&#x27;on puisse dire ! Grâce à son expérience et son analyse il a pu me challenger et m&#x27;accompagner sur tous les aspects liés à ma startup innovante. Chacune de nos interactions ont fait grandir ma startup dans la bonne direction. Une hauteur de vue plus que bienvenue ! Merci Thierry.</blockquote><figcaption><b>Dr Sarah Mellouki</b><span>CEO de Cosmecode, cliente · avril 2021</span></figcaption></figure><figure class="rec"><blockquote>Inutile de souligner le savoir-faire de Thierry, son background témoigne de son expertise. C&#x27;est son savoir-être et ses valeurs humaines que je souhaite mettre en avant. Thierry allie bienveillance et empathie, de précieuses qualités dans le monde d&#x27;aujourd&#x27;hui.</blockquote><figcaption><b>Mickael Phongsa</b><span>Ex-directeur marketing de Meilleurtaux · avril 2020</span></figcaption></figure><figure class="rec"><blockquote>J&#x27;ai eu l&#x27;opportunité de travailler avec Thierry sur plusieurs métiers et projets. J&#x27;apprécie sa capacité à comprendre et maîtriser son marché, discerner et appréhender ses enjeux et ses contraintes, notamment par le prisme de l&#x27;innovation. Son expérience sur les Entrepreneurs et Professionnels est très large et riche. Son approche de coaching opérationnel est concrète et apporte un vrai plus pour concrétiser vos projets.</blockquote><figcaption><b>Jérôme Prigent</b><span>Managing Director, BCB Europe · mars 2021</span></figcaption></figure><figure class="rec"><blockquote>Thierry est une personne dynamique avec un excellent sens de l’écoute. Ceci lui confère une bonne capacité à définir des objectifs rationnels et positifs pour ses clients. Un professionnel a avoir dans son cercle ! Je le recommande vivement.</blockquote><figcaption><b>Aude Milesi Rotsen</b><span>Conférencière et artiste plasticienne · mars 2021</span></figcaption></figure><figure class="rec"><blockquote>Thierry Garot est une personne qui allie deux qualités essentielles : ouverture sur l’humain et rigueur dans la finance. En pointe sur les technologies digitales, il réalise des prestations sur-mesure pour la recherche de financements d’entreprise.</blockquote><figcaption><b>Jacques Milcent</b><span>Formateur certifié DISC · novembre 2020</span></figcaption></figure><figure class="rec"><blockquote>Un entrepreneur très engagé, porteur de Valeurs Humaines certaines, créatif et imaginatif, compétent et sympathique. Thierry Garot est à lui seul un cocktail détonnant avec qui il est agréable de travailler... et en plus je le pense...</blockquote><figcaption><b>Hervé Lambert</b><span>Fondateur de Repriz et d&#x27;Argos · mars 2013</span></figcaption></figure></div>
+    <p><a class="allrec" href="https://www.linkedin.com/in/thierry-garot/details/recommendations/">See all 15 recommendations on LinkedIn</a></p>
+  </div>
+</section>
+
+<section class="band" id="parcours" style="background:var(--cream)">
+  <div class="wrap two">
+    <div>
+      <h2>My career</h2>
+      <div class="path" id="path"></div>
+    </div>
+    <aside class="voice">
+      <h3>On stage and in writing</h3>
+      <ul>
+        <li>Corporate talk: “A team has its zone of genius too”.</li>
+        <li>A TEDx-style talk at AKAE Business School in Bordeaux.</li>
+        <li>Speaking at La Seine Musicale in Paris.</li>
+        <li>Digital accessibility expert (RGAA, European Accessibility Act), with <a href="https://inclusio-formation.com" style="color:#ffcfa8">Inclusio Formation</a>.</li>
+      </ul>
+      <p style="margin-top:14px;color:#d6d9ff">I see myself as someone who passes things on. What I learned by falling, I would rather share.</p>
+    </aside>
+  </div>
+</section>
+
+<section class="band" id="articles" aria-labelledby="art-t">
+  <div class="wrap">
+    <h2 id="art-t">What I write</h2>
+    <p class="lead">One article a week, in French, about what I have learned by building, falling and supporting others.</p>
+    <div class="arts">
+      <a class="art" href="../articles/interface-garantie-avant-credit.html" hreflang="fr"><span class="d">Entrepreneurship · in French</span><b>Interface: the day we gave the guarantee before the loan</b><span class="more">Read the article</span></a>
+      <a class="art" href="../articles/adoption-talents.html" hreflang="fr"><span class="d">My story · in French</span><b>Four children, one lesson: look at what others do best</b><span class="more">Read the article</span></a>
+      <a class="art all" href="../articles/" hreflang="fr"><b>All articles</b><span class="more">See the list</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="band book" id="roman" aria-labelledby="roman-t">
+  <div class="wrap bgrid">
+    <div class="covwrap">
+    <a class="realcover" href="https://www.amazon.fr/dp/B0FYFWJ9XP" aria-label="See 2037, l'année où tout a changé on Amazon"><img src="https://m.media-amazon.com/images/I/812EzGQIXFL._SL600_.jpg" alt="Cover of the novel 2037, l'année où tout a changé, by Thierry Garot" width="400" height="600" loading="lazy" onerror="this.parentNode.hidden=true;this.parentNode.nextElementSibling.hidden=false"></a>
+    <div class="cover" aria-hidden="true" hidden>
+      <div class="spine"></div>
+      <div class="face">
+        <span class="au">Thierry Garot</span>
+        <span class="yr2">2037</span>
+        <span class="st">L'année où tout a changé</span>
+        <svg viewBox="0 0 200 60" preserveAspectRatio="none"><path d="M0,40 C40,20 70,55 110,32 S170,18 200,30" fill="none" stroke="#F97316" stroke-width="3"/></svg>
+      </div>
+    </div>
+    </div>
+    <div>
+      <h2 id="roman-t">2037, the year everything changed</h2>
+      <p class="lead">My first novel, written in French. Science fiction, by an entrepreneur who spends his days imagining what does not exist yet.</p>
+      <p>Starting a company or writing a novel is, deep down, the same gesture: looking beyond what you can see, and taking others there with you.</p>
+      <a class="btn amz" href="https://www.amazon.fr/dp/B0FYFWJ9XP">Read 2037, available on Amazon</a>
+    </div>
+  </div>
+</section>
+
+<section class="band follow" aria-labelledby="follow-t">
+  <div class="wrap">
+    <h2 id="follow-t">Let’s stay in touch</h2>
+    <div class="fgrid">
+      <a class="fcard" href="https://www.linkedin.com/in/thierry-garot"><span class="k">LinkedIn</span><b>Follow me on LinkedIn</b><span>32,000 people already follow me. I share what I learn there, unfiltered.</span><span class="go">Follow</span></a>
+      <a class="fcard nl" href="https://www.linkedin.com/newsletters/ouvrir-la-porte-7527429431049584640/"><span class="k">Newsletter</span><b>Get “Ouvrir la porte”</b><span>My Tuesday LinkedIn newsletter, in French, already read by more than 3,000 subscribers.</span><span class="go">Subscribe to the newsletter</span></a>
+      <a class="fcard" href="https://inclusio-formation.com"><span class="k">Inclusio Formation</span><b>Disability and accessibility at work</b><span>I raise awareness of disability, accessibility and inclusion within teams. Accessibility is the first of all freedoms.</span><span class="go">inclusio-formation.com</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="band contact" id="contact">
+  <div class="wrap grid">
+    <div>
+      <h2>Let’s talk about what you do best</h2>
+      <p style="font-size:18px">The easiest way is LinkedIn. I reply myself, no bots.</p>
+    </div>
+    <div class="btns">
+      <a class="btn" href="https://www.linkedin.com/in/thierry-garot">My LinkedIn</a>
+      <a class="btn alt" href="tel:+33756866000">+33 7 56 86 60 00</a>
+    </div>
+  </div>
+</section>
+
+<footer class="band" style="padding-block:28px">
+  <div class="wrap">
+    <span>Made by Thierry, on the Atlantic coast.</span>
+    <span class="inst"><button type="button" id="installBtn">Install the app on my phone</button><small id="installTip" hidden>On iPhone: tap Share, then “Add to Home Screen”. On Android: menu ⋮, then “Install app”.</small></span>
+    <span><a href="https://votrezonedegenie.fr">Zone de génie</a> · <a href="https://getlinora.fr">getLinora</a> · <a href="https://sillaj.me">Sillaj</a> · <a href="https://inclusio-formation.com">Inclusio Formation</a> · <a href="https://www.amazon.fr/dp/B0FYFWJ9XP">2037</a></span>
+  </div>
+</footer>
+
+<nav class="tabbar" aria-label="Mobile navigation">
+  <a href="#histoire"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg>Story</a>
+  <a href="#strategie"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17c4-8 8 4 12-4s4-6 6-6"/></svg>Approach</a>
+  <a href="../articles/"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg>Articles</a>
+  <a href="#contact"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg>Contact</a>
+</nav>
+<script>
+{
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const stops=[
+  {y:'1969',p:'Abidjan',t:'Born in Treichville'},
+  {y:'1976',p:'Périgueux',t:'Back to France, aged 7'},
+  {y:'2000',p:'Niort',t:'Interface, a first'},
+  {y:'2003',p:'Thailand',t:'We become six'},
+  {y:'2016',p:'Paris',t:'Meilleurtaux Pro'},
+  {y:'2026',p:'Atlantic',t:'My three ventures'}
+];
+const route=document.getElementById('route');
+const smooth=pts=>{let d=`M${pts[0][0]},${pts[0][1]}`;for(let i=1;i<pts.length;i++){const a=pts[i-1],b=pts[i];const mx=(a[0]+b[0])/2,my=(a[1]+b[1])/2;d+=` Q${a[0]+(mx-a[0])*1},${a[1]} ${mx},${my} T${b[0]},${b[1]}`}return d};
+const drawRoute=()=>{
+  const W=route.clientWidth,H=route.clientHeight;if(!W||!H)return;
+  const narrow=W<560;let pts=[];let waves='';
+  for(let k=0;k<7;k++){const yy=H*(0.12+k*0.13);waves+=`<path d="M0,${yy} C${W*.25},${yy-10} ${W*.5},${yy+10} ${W},${yy-4}" fill="none" stroke="#ffffff" stroke-opacity="${0.05+k*0.008}" stroke-width="1"/>`}
+  if(narrow){
+    const top=30,bot=H-70,x0=46;
+    pts=stops.map((s,i)=>[x0+(i%2?26:0),top+(bot-top)*i/(stops.length-1)]);
+  }else{
+    const l=70,r=W-70,mid=H*0.52,amp=Math.min(70,H*0.2);
+    pts=stops.map((s,i)=>[l+(r-l)*i/(stops.length-1),mid+(i%2?amp:-amp)*0.75]);
+  }
+  const d=smooth(pts);
+  let lab='';
+  stops.forEach((s,i)=>{
+    const [x,y]=pts[i];
+    let tx,ty,anchor;
+    if(narrow){tx=x+(i%2?24:50);ty=y-6;anchor='start'}
+    else{anchor='middle';tx=x;ty=i%2?y+44:y-62}
+    lab+=`<g><circle cx="${x}" cy="${y}" r="13" fill="#0c1033" stroke="#F97316" stroke-width="3"/><circle cx="${x}" cy="${y}" r="5" fill="${i===3?'#FFF200':'#F97316'}"/>
+    <text x="${tx}" y="${ty}" text-anchor="${anchor}" fill="#F97316" style="font-family:Fraunces,Georgia,serif;font-size:24px;font-weight:600">${esc(s.y)}</text>
+    <text x="${tx}" y="${ty+21}" text-anchor="${anchor}" fill="#ffffff" font-weight="800" font-size="15">${esc(s.p)}</text>
+    <text x="${tx}" y="${ty+40}" text-anchor="${anchor}" fill="#c9ccf5" font-size="14">${esc(s.t)}</text></g>`;
+  });
+  route.innerHTML=`${waves}<path d="${d}" fill="none" stroke="#F97316" stroke-opacity=".25" stroke-width="12" stroke-linecap="round"/>
+  <path class="trail" d="${d}" fill="none" stroke="#F97316" stroke-width="4" stroke-linecap="round" stroke-dasharray="4000" stroke-dashoffset="4000" style="animation:draw 2.6s ease-out .2s forwards"/>${lab}`;
+};
+const roRoute=new ResizeObserver(drawRoute);roRoute.observe(route);
+
+const fam=document.getElementById('fam');
+const drawFam=()=>{
+  const W=fam.clientWidth,H=fam.clientHeight;if(!W||!H)return;
+  const ground=H-30,u=Math.min(W/9,H/4.2);
+  const people=[{x:.16,h:1.9,c:'#141a5c'},{x:.32,h:1.75,c:'#141a5c'},{x:.5,h:1.15,c:'#F97316'},{x:.64,h:1.05,c:'#F97316'},{x:.77,h:.95,c:'#F97316'},{x:.89,h:.85,c:'#F97316'}];
+  let g=`<ellipse cx="${W/2}" cy="${ground+8}" rx="${W*.46}" ry="10" fill="#141a5c" opacity=".08"/>`;
+  const heads=[];
+  people.forEach(p=>{const x=W*p.x,h=u*p.h,r=h*.2;const top=ground-h;
+    g+=`<path d="M${x-h*.26},${ground} Q${x-h*.28},${top+r*2.2} ${x},${top+r*2.1} Q${x+h*.28},${top+r*2.2} ${x+h*.26},${ground} Z" fill="${p.c}"/>
+    <path d="M${x},${top+r*2.1} Q${x+h*.28},${top+r*2.2} ${x+h*.26},${ground} L${x+h*.1},${ground} Q${x+h*.12},${top+r*2.6} ${x},${top+r*2.1}Z" fill="#000" opacity=".12"/>
+    <circle cx="${x}" cy="${top+r}" r="${r}" fill="${p.c}"/><circle cx="${x-r*.3}" cy="${top+r*.7}" r="${r*.28}" fill="#fff" opacity=".25"/>`;
+    heads.push([x,ground-h*.45]);
+  });
+  const d=heads.map((h,i)=>(i?'L':'M')+h[0]+','+h[1]).join(' ');
+  g+=`<path d="${d}" fill="none" stroke="#FFF200" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity=".9"/>`;
+  g+=`<text x="${W*.24}" y="${ground+28}" text-anchor="middle" fill="currentColor" font-size="14" font-weight="700">${W<480?'Us':'The two of us'}</text><text x="${W*.695}" y="${ground+28}" text-anchor="middle" fill="currentColor" font-size="14" font-weight="700">${W<480?'Our 4 children':'Our four children · December 2003'}</text>`;
+  fam.innerHTML=g;
+};
+const roFam=new ResizeObserver(drawFam);roFam.observe(fam);
+
+const ico={
+ pen:'<path d="M5 25l3-9L20 4l6 6-12 12z" fill="none" stroke="#F97316" stroke-width="2.4" stroke-linejoin="round"/><path d="M5 25l6-2" stroke="#F97316" stroke-width="2.4"/>',
+ hand:'<circle cx="15" cy="15" r="11" fill="none" stroke="#F97316" stroke-width="2.4"/><path d="M8 22L22 8" stroke="#F97316" stroke-width="2.4"/>',
+ door:'<rect x="7" y="4" width="16" height="22" rx="2" fill="none" stroke="#F97316" stroke-width="2.4"/><circle cx="19" cy="15" r="1.8" fill="#F97316"/>',
+ anchor:'<circle cx="15" cy="6" r="3" fill="none" stroke="#F97316" stroke-width="2.4"/><path d="M15 9v17M6 18c0 5 4 8 9 8s9-3 9-8M10 13h10" fill="none" stroke="#F97316" stroke-width="2.4" stroke-linecap="round"/>',
+ heart:'<path d="M15 26S4 19 4 11a6 6 0 0 1 11-3 6 6 0 0 1 11 3c0 8-11 15-11 15z" fill="none" stroke="#F97316" stroke-width="2.4" stroke-linejoin="round"/>'
+};
+const eng=[
+ ['pen','Impeccable language','Every word counts. One mistake, and your image suffers.'],
+ ['hand','Never a hard sell','We offer, we do not insist. A follow-up brings something new, or it is not sent.'],
+ ['door','No meeting forced out of anyone','You keep the last word. A meeting is a goal, never pressure.'],
+ ['anchor','A duty of effort','I commit to the work I deliver, not to empty promises.'],
+ ['heart','People first','Politeness, empathy, kindness. In every message.']
+];
+document.getElementById('engagements').innerHTML=eng.map(e=>`<li><svg viewBox="0 0 30 30" aria-hidden="true">${ico[e[0]]}</svg><div><b>${esc(e[1])}</b><span>${esc(e[2])}</span></div></li>`).join('');
+
+const path=[
+ ['1993 – 2000','Syndicat mixte du Pays Mellois','Head of economic development, in Melle.'],
+ ['2000 – 2006','Interface, pre-guarantee fund','Founder, in Niort. The first to give the guarantee before the loan. 600 cases, set up with Caisse des Dépôts and Caisse d\'Épargne.'],
+ ['2006 – 2015','Business loan brokerage','My own business financing firm, in La Rochelle.'],
+ ['2015 – 2016','Unilend','Head of partnerships. The first loan by a bank in continental Europe on a crowdlending platform.'],
+ ['2016 – 2018','Meilleurtaux.com','Created the group’s fourth business line and the meilleurtauxpro.com website.'],
+ ['2018 – 2020','Pretpro','Head of partnerships, in Nantes.'],
+ ['Since 2020','Independent entrepreneur','Inclusio Formation, then Zone de génie, getLinora and Sillaj, from the Atlantic coast.']
+];
+const rr=document.getElementById('rrail');
+const rstep=d=>{const c=rr.querySelector('.rec');rr.scrollBy({left:d*((c?c.getBoundingClientRect().width:400)+18),behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'})};
+document.getElementById('rPrev').addEventListener('click',()=>rstep(-1));
+document.getElementById('rNext').addEventListener('click',()=>rstep(1));
+rr.addEventListener('keydown',e=>{if(e.key==='ArrowRight'){e.preventDefault();rstep(1)}if(e.key==='ArrowLeft'){e.preventDefault();rstep(-1)}});
+let deferred=null;
+window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferred=e});
+document.getElementById('installBtn').addEventListener('click',async()=>{
+  if(deferred){try{deferred.prompt();await deferred.userChoice}catch(e){}deferred=null;return}
+  document.getElementById('installTip').hidden=false;
+});
+document.getElementById('path').innerHTML=path.map(p=>`<div><span class="y">${esc(p[0])}</span><span><b>${esc(p[1])}</b><p>${esc(p[2])}</p></span></div>`).join('');
+}
+</script>
+<script>try{if('serviceWorker' in navigator&&location.hostname.endsWith('thierrygarot.fr'))navigator.serviceWorker.register('/sw.js')}catch(e){}</script>
+</body>
+</html>
