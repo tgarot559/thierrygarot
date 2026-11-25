@@ -26,13 +26,13 @@
 {"@context":"https://schema.org","@type":"Person","name":"Thierry Garot","alternateName":"Thierry Hamdan Garot","url":"https://thierrygarot.fr/","image":"https://thierrygarot.fr/img/thierry-garot.jpg","birthPlace":"Abidjan","jobTitle":"Entrepreneur, conférencier","description":"Entrepreneur depuis 25 ans, conférencier, créateur de Zone de génie, getLinora et Sillaj. Engagé pour l'accessibilité et l'inclusion du handicap.","knowsAbout":["LinkedIn","Prospection commerciale","Accessibilité numérique","European Accessibility Act","Partenariats bancaires","Entrepreneuriat"],"award":"Top 100 Handicap France","alumniOf":{"@type":"CollegeOrUniversity","name":"ESGCI"},"sameAs":["https://www.linkedin.com/in/thierry-garot","https://votrezonedegenie.fr","https://getlinora.fr","https://sillaj.me"],"founder":[{"@type":"Organization","name":"Zone de génie","url":"https://votrezonedegenie.fr"},{"@type":"Organization","name":"getLinora","url":"https://getlinora.fr"},{"@type":"Organization","name":"Sillaj","url":"https://sillaj.me"}]}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..700,100;1,9..144,400..700,100&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
 <style>
 /* VOICE occasion : un portrait chaleureux et assumé, à la première personne
    IDEA une carte de navigation : le fil orange de sa vie, d'Abidjan à l'Atlantique
    PICTURE la route orange qui relie six escales, sur un fond d'océan nuit
    COLOUR nuit marine (socle commun), orange fil rouge, crème ; chaque création garde sa couleur
-   TYPE Anton (lettrage Zone de génie) + Manrope (lettrage getLinora)
+   TYPE Fraunces doux (rond, mûr) + Manrope
    LAYOUT nom et promesse en haut, carte pleine largeur dessous ; sur mobile la route devient verticale */
 :root{color-scheme:light dark;
 --bg:light-dark(#ffffff,#0c1033);
@@ -53,13 +53,13 @@ a{color:inherit}
 img{max-width:100%}
 .band{padding-block:clamp(36px,5vw,80px);padding-left:max(5vw,16px,env(safe-area-inset-left,0px));padding-right:max(5vw,16px,env(safe-area-inset-right,0px))}
 .wrap{max-width:1240px;margin:0 auto}
-h1,h2,h3{font-family:Anton,Impact,sans-serif;font-weight:400;line-height:1.05;letter-spacing:.005em;text-wrap:balance;margin:0}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:400;line-height:1.05;letter-spacing:.005em;text-wrap:balance;margin:0}
 h2{font-size:clamp(34px,4.6vw,52px);margin-bottom:18px}
 h3{font-size:26px}
 p{margin:0 0 14px;max-width:66ch}
 .lead{font-size:clamp(18px,2vw,21px);color:var(--soft)}
 nav{position:sticky;top:0;z-index:5;background:var(--navy2);color:#fff;display:flex;flex-wrap:wrap;align-items:center;gap:6px 22px;padding:12px max(5vw,16px)}
-nav .brand{font-family:Anton,sans-serif;font-size:20px;text-decoration:none;margin-right:auto}
+nav .brand{font-family:Fraunces,Georgia,serif;font-size:20px;text-decoration:none;margin-right:auto}
 nav .brand b{color:var(--orange);font-weight:400}
 nav .links{display:flex;flex-wrap:wrap;gap:4px 18px}
 nav .links a{text-decoration:none;font-size:15px;font-weight:700;color:#d8dbff;padding:6px 0}
@@ -81,16 +81,16 @@ nav .links a:hover,nav .links a:focus-visible{color:var(--orange)}
 .fig text{font-family:Manrope,sans-serif}
 .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(10em,1fr));gap:2px;background:var(--line);border-block:1px solid var(--line)}
 .stats div{background:var(--bg);padding:22px 18px}
-.stats strong{display:block;font-family:Anton,sans-serif;font-weight:400;font-size:clamp(34px,4vw,46px);line-height:1;color:var(--orange);white-space:nowrap}
+.stats strong{display:block;font-family:Fraunces,Georgia,serif;font-weight:400;font-size:clamp(34px,4vw,46px);line-height:1;color:var(--orange);white-space:nowrap}
 .stats span{font-size:15px;color:var(--soft)}
 .story{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px)}
 .gen{display:grid;gap:14px}
 .gen article{border-top:1px solid var(--line);padding-top:16px;display:grid;grid-template-columns:5.2em minmax(0,1fr);gap:14px}
-.gen .yr{font-family:Anton,sans-serif;font-size:26px;color:var(--orange);line-height:1.1}
+.gen .yr{font-family:Fraunces,Georgia,serif;font-size:26px;color:var(--orange);line-height:1.1}
 .gen h3{font-size:22px;margin-bottom:6px;font-family:Manrope,sans-serif;font-weight:800}
 .gen p{font-size:16px;color:var(--soft);margin:0}
 .motto{background:var(--orange);color:#1a0e00;border-radius:4px;padding:26px 24px;margin-top:22px}
-.motto p{font-family:Anton,sans-serif;font-size:clamp(24px,3vw,32px);line-height:1.15;margin:0;max-width:none}
+.motto p{font-family:Fraunces,Georgia,serif;font-size:clamp(24px,3vw,32px);line-height:1.15;margin:0;max-width:none}
 .motto small{display:block;margin-top:10px;font-size:15px;font-weight:700}
 .family{background:var(--cream)}
 .family .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:clamp(24px,4vw,56px);align-items:center}
@@ -99,7 +99,7 @@ nav .links a:hover,nav .links a:focus-visible{color:var(--orange)}
 .strat .lead{color:#c3c7f2}
 .steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:28px}
 .card{border-radius:6px;padding:26px 22px 24px;display:flex;flex-direction:column;gap:10px}
-.card .verb{font-family:Anton,sans-serif;font-size:clamp(40px,4.4vw,56px);line-height:1}
+.card .verb{font-family:Fraunces,Georgia,serif;font-size:clamp(40px,4.4vw,56px);line-height:1}
 .card h3{font-family:Manrope,sans-serif;font-weight:800;font-size:20px}
 .card p{font-size:16px;margin:0}
 .card .proof{font-size:15px;font-weight:700;padding-top:10px;border-top:1px solid currentColor;opacity:.92}
@@ -123,7 +123,7 @@ nav .links a:hover,nav .links a:focus-visible{color:var(--orange)}
 .charter li span{color:var(--soft);font-size:16px}
 .path{display:grid;gap:0}
 .path div{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:22px;padding:16px 0;border-top:1px solid var(--line)}
-.path .y{font-family:Anton,sans-serif;font-size:22px;color:var(--orange);white-space:nowrap;min-width:6.4em}
+.path .y{font-family:Fraunces,Georgia,serif;font-size:22px;color:var(--orange);white-space:nowrap;min-width:6.4em}
 .path b{font-size:18px}
 .path p{margin:4px 0 0;color:var(--soft);font-size:16px}
 .two{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:clamp(24px,4vw,56px)}
@@ -149,7 +149,7 @@ nav .links a:hover,nav .links a:focus-visible{color:var(--orange)}
 .rrail{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:24px 2px 18px}
 .rec{flex:0 0 min(420px,84vw);scroll-snap-align:start;margin:0;background:#fff;color:#141a3c;border-radius:6px;padding:26px 24px;display:flex;flex-direction:column;gap:16px;border-top:5px solid var(--orange)}
 .rec blockquote{margin:0;font-size:16px;line-height:1.6}
-.rec blockquote::before{content:"“";display:block;font-family:Anton,sans-serif;font-size:54px;line-height:.6;color:var(--orange);margin-bottom:6px}
+.rec blockquote::before{content:"“";display:block;font-family:Fraunces,Georgia,serif;font-size:54px;line-height:.6;color:var(--orange);margin-bottom:6px}
 .rec figcaption{margin-top:auto;border-top:1px solid #e3e5f0;padding-top:12px}
 .rec b{display:block;font-size:16px}
 .rec span{font-size:14px;color:#4a5072}
@@ -161,7 +161,7 @@ nav .links a:hover,nav .links a:focus-visible{color:var(--orange)}
 .spine{width:16px;background:#a8470a;border-radius:3px 0 0 3px}
 .face{flex:1;background:linear-gradient(160deg,#1f2878,#0a0d2a);border-radius:0 4px 4px 0;padding:22px 18px;display:flex;flex-direction:column;position:relative;overflow:hidden;box-shadow:inset 0 0 0 1px rgba(255,255,255,.08)}
 .face .au{font-weight:800;font-size:14px;color:#c9ccf5}
-.face .yr2{font-family:Anton,sans-serif;font-size:clamp(64px,9vw,84px);line-height:1;color:var(--orange);margin-top:auto}
+.face .yr2{font-family:Fraunces,Georgia,serif;font-size:clamp(64px,9vw,84px);line-height:1;color:var(--orange);margin-top:auto}
 .face .st{font-weight:700;font-size:15px;line-height:1.3;margin-top:6px}
 .face svg{position:absolute;left:0;right:0;top:34%;width:100%;height:60px}
 .contact{background:var(--orange);color:#1a0e00}
@@ -192,6 +192,48 @@ nav[aria-label="Navigation principale"]{position:static;padding-top:max(12px,env
 body{padding-bottom:calc(74px + env(safe-area-inset-bottom))}
 html{scroll-padding-top:16px}
 }
+
+/* --- Maturité : rondeur, air, vérité --- */
+h1,h2,h3{font-weight:500;letter-spacing:-.012em;line-height:1.1;font-variation-settings:"SOFT" 100,"opsz" 96}
+h2{font-size:clamp(32px,4vw,46px)}
+.lead{line-height:1.6}
+nav .brand{font-weight:600;font-size:21px}
+nav .brand b{font-style:italic;font-weight:500}
+.hero{background:radial-gradient(110% 80% at 85% 0%,#232c86 0%,var(--navy) 50%,var(--navy2) 100%);border-radius:0 0 40px 40px}
+.hero .name{font-size:clamp(48px,7vw,88px);line-height:1.02;font-weight:500}
+.hero .name span{font-style:italic;font-weight:500}
+.hero .promise{font-family:Fraunces,Georgia,serif;font-weight:400;font-style:italic;font-size:clamp(22px,2.4vw,28px);line-height:1.35;color:#fff;max-width:28ch}
+.me img{border-radius:32px;width:clamp(180px,22vw,280px);box-shadow:0 0 0 4px var(--orange),0 24px 60px rgba(0,0,0,.35)}
+.hero .quote{border-left:0;background:rgba(255,255,255,.07);border-radius:20px;padding:16px 20px;font-family:Fraunces,Georgia,serif;font-style:italic}
+.stats{gap:14px;background:transparent;border:0;padding:clamp(20px,3vw,36px) max(5vw,16px);max-width:1240px;margin:0 auto}
+.stats div{border-radius:22px;background:var(--cream);text-align:left}
+.stats strong{font-weight:500;color:var(--orange)}
+.motto{border-radius:24px;background:var(--navy);color:#fff}
+.motto p{font-weight:400;font-style:italic}
+.motto small{color:#ffcfa8}
+.gen article{border-top:0;background:var(--cream);border-radius:20px;padding:18px 20px}
+.gen .yr{font-weight:600}
+.family{border-radius:40px;margin:0 max(2vw,8px)}
+.strat{border-radius:40px;margin:clamp(16px,3vw,32px) max(2vw,8px)}
+.card{border-radius:26px}
+.card .verb{font-weight:500;font-style:italic}
+.card a.go,.btn{border-radius:999px}
+.thread i{border-radius:3px}
+.charter ol{border-radius:26px;gap:0;background:transparent;border:1px solid var(--line)}
+.charter li{border-bottom:1px solid var(--line)}
+.charter li:last-child{border-bottom:0}
+.recs{border-radius:40px;margin:clamp(16px,3vw,32px) max(2vw,8px)}
+.rec{border-radius:24px;border-top:0;box-shadow:inset 0 4px 0 var(--orange)}
+.rec blockquote::before{font-weight:600}
+.path div{border-top:0;background:var(--bg);border-radius:18px;padding:16px 18px;margin-bottom:8px;box-shadow:0 1px 0 var(--line)}
+.path .y{font-weight:600}
+.voice{border-radius:26px}
+.art{border-radius:22px}
+.book{border-radius:40px;margin:clamp(16px,3vw,32px) max(2vw,8px)}
+.face{border-radius:4px 14px 14px 4px}
+.contact{border-radius:40px 40px 0 0}
+.contact h2{font-weight:500}
+@media(max-width:600px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.stats div{padding:16px 14px}.hero{border-radius:0 0 28px 28px}.family,.strat,.recs,.book{border-radius:28px;margin-inline:6px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}#route path.trail{animation:none!important;stroke-dashoffset:0!important}}
 @keyframes draw{to{stroke-dashoffset:0}}
 </style>
@@ -215,7 +257,7 @@ html{scroll-padding-top:16px}
   <div class="wrap">
     <div class="row">
       <div>
-        <h1 class="name">Thierry<br><span>Garot</span></h1>
+        <h1 class="name">Thierry <span>Garot</span></h1>
         <p class="promise">Je révèle ce que vous faites de mieux. Puis je le fais savoir, sans jamais forcer.</p>
         <p class="sub">Entrepreneur depuis 25 ans, conférencier, créateur de Zone de génie, getLinora et Sillaj. Père de quatre enfants. Installé au bord de l'Atlantique.</p>
       </div>
@@ -424,7 +466,7 @@ const drawRoute=()=>{
     if(narrow){tx=x+(i%2?24:50);ty=y-6;anchor='start'}
     else{anchor='middle';tx=x;ty=i%2?y+44:y-62}
     lab+=`<g><circle cx="${x}" cy="${y}" r="13" fill="#0c1033" stroke="#F97316" stroke-width="3"/><circle cx="${x}" cy="${y}" r="5" fill="${i===3?'#FFF200':'#F97316'}"/>
-    <text x="${tx}" y="${ty}" text-anchor="${anchor}" fill="#F97316" style="font-family:Anton,sans-serif;font-size:24px">${esc(s.y)}</text>
+    <text x="${tx}" y="${ty}" text-anchor="${anchor}" fill="#F97316" style="font-family:Fraunces,Georgia,serif;font-size:24px;font-weight:600">${esc(s.y)}</text>
     <text x="${tx}" y="${ty+21}" text-anchor="${anchor}" fill="#ffffff" font-weight="800" font-size="15">${esc(s.p)}</text>
     <text x="${tx}" y="${ty+40}" text-anchor="${anchor}" fill="#c9ccf5" font-size="14">${esc(s.t)}</text></g>`;
   });
@@ -448,7 +490,7 @@ const drawFam=()=>{
   });
   const d=heads.map((h,i)=>(i?'L':'M')+h[0]+','+h[1]).join(' ');
   g+=`<path d="${d}" fill="none" stroke="#FFF200" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity=".9"/>`;
-  g+=`<text x="${W*.24}" y="${ground+28}" text-anchor="middle" fill="currentColor" font-size="14" font-weight="700">Nous deux</text><text x="${W*.695}" y="${ground+28}" text-anchor="middle" fill="currentColor" font-size="14" font-weight="700">Nos quatre enfants · décembre 2003</text>`;
+  g+=`<text x="${W*.24}" y="${ground+28}" text-anchor="middle" fill="currentColor" font-size="14" font-weight="700">${W<480?'Nous':'Nous deux'}</text><text x="${W*.695}" y="${ground+28}" text-anchor="middle" fill="currentColor" font-size="14" font-weight="700">${W<480?'Nos 4 enfants':'Nos quatre enfants · décembre 2003'}</text>`;
   fam.innerHTML=g;
 };
 const roFam=new ResizeObserver(drawFam);roFam.observe(fam);
