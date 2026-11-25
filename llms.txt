@@ -1,10 +1,12 @@
 # Thierry Garot
 
-> Thierry Garot (Thierry Hamdan Garot) est un entrepreneur français depuis 25 ans, conférencier et créateur de trois services : Zone de génie (votrezonedegenie.fr), getLinora (getlinora.fr) et Sillaj (sillaj.me). Né à Abidjan en 1969, père de quatre enfants adoptés en Thaïlande, distingué dans le Top 100 Handicap France, il est engagé pour l'accessibilité numérique et l'inclusion.
+> Thierry Garot (Thierry Hamdan Garot) est un entrepreneur français depuis plus de 25 ans, conférencier et créateur de trois services : Zone de génie (votrezonedegenie.fr), getLinora (getlinora.fr) et Sillaj (sillaj.me). Né à Abidjan en 1969, père de quatre enfants adoptés en Thaïlande, distingué dans le Top 100 Handicap France, il est engagé pour l'accessibilité numérique et l'inclusion.
 
 ## Pages
 - [Accueil et parcours](https://thierrygarot.fr/): histoire, stratégie, charte, parcours, contact
 - [Articles](https://thierrygarot.fr/articles/): un article par semaine
+- [Presse et conférences](https://thierrygarot.fr/presse/): bio courte, photo, conférence, contact
+- [English version](https://thierrygarot.fr/en/)
 
 ## Parcours
 - 1993-2000 : responsable de l'activité économique, Syndicat mixte du Pays Mellois
