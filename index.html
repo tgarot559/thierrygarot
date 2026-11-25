@@ -140,6 +140,20 @@ nav .links a:hover,nav .links a:focus-visible{color:var(--orange)}
 .art.all{background:var(--navy);color:#fff;border-color:var(--navy)}
 .art.all .more{color:#c9ccf5}
 @media(max-width:900px){.arts{grid-template-columns:minmax(0,1fr)}.art{min-height:0}}
+.recs{background:var(--navy);color:#fff}
+.recs h2{color:#fff}.recs .lead{color:#c9ccf5}
+.rh{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap}
+.arr{display:flex;gap:10px}
+.arr button{width:48px;height:48px;border-radius:50%;border:2px solid #fff;background:transparent;color:#fff;font-size:22px;cursor:pointer}
+.arr button:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
+.rrail{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:24px 2px 18px}
+.rec{flex:0 0 min(420px,84vw);scroll-snap-align:start;margin:0;background:#fff;color:#141a3c;border-radius:6px;padding:26px 24px;display:flex;flex-direction:column;gap:16px;border-top:5px solid var(--orange)}
+.rec blockquote{margin:0;font-size:16px;line-height:1.6}
+.rec blockquote::before{content:"“";display:block;font-family:Anton,sans-serif;font-size:54px;line-height:.6;color:var(--orange);margin-bottom:6px}
+.rec figcaption{margin-top:auto;border-top:1px solid #e3e5f0;padding-top:12px}
+.rec b{display:block;font-size:16px}
+.rec span{font-size:14px;color:#4a5072}
+.allrec{color:#fff;font-weight:800}
 .book{background:var(--navy2);color:#fff}
 .book .lead{color:#c9ccf5}
 .bgrid{display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:center}
@@ -189,6 +203,7 @@ html{scroll-padding-top:16px}
     <a href="#histoire">Mon histoire</a>
     <a href="#strategie">Ma stratégie</a>
     <a href="#charte">Ma charte</a>
+    <a href="#avis">Avis</a>
     <a href="#parcours">Parcours</a>
     <a href="articles/">Articles</a>
     <a href="#roman">Mon roman</a>
@@ -289,6 +304,14 @@ html{scroll-padding-top:16px}
       <p>Ceux que j'accompagne manient bien la langue et détestent qu'on les bouscule. Moi aussi. Alors je fais de la prospection comme on reçoit quelqu'un chez soi.</p>
     </div>
     <ol id="engagements"></ol>
+  </div>
+</section>
+
+<section class="band recs" id="avis" aria-labelledby="avis-t">
+  <div class="wrap">
+    <div class="rh"><div><h2 id="avis-t">Ce qu'ils en disent</h2><p class="lead">Des recommandations publiées sur mon profil LinkedIn, reprises mot pour mot.</p></div><div class="arr"><button type="button" id="rPrev" aria-label="Recommandation précédente">←</button><button type="button" id="rNext" aria-label="Recommandation suivante">→</button></div></div>
+    <div class="rrail" id="rrail" tabindex="0" aria-label="Recommandations"><figure class="rec"><blockquote>J&#x27;ai eu à plusieurs occasions le plaisir de travailler avec THIERRY GAROT. Les préparations sont sérieuses, le soucis du partage de savoir et d&#x27;expériences permanents. Au-delà de la qualité des conseils, des formations et des accompagnements qu&#x27;il prodigue, c&#x27;est la qualité humaine qui séduit et rassure. Tous les projets ou entreprises communes sont toujours réalisées avec une réelle ambition de partage et de bienveillance. Efficaces et humains, voilà les deux vertus qui caractérisent les collaborations fructueuses que j&#x27;ai poursuivies avec THIERRY GAROT. Je vous le recommande avec enthousiasme.</blockquote><figcaption><b>Thierry Watelet</b><span>Conférencier, formateur et auteur · avril 2020</span></figcaption></figure><figure class="rec"><blockquote>I worked with Thierry at Meilleurtaux on the launch of the SME lending offer. Thierry has the qualities of a business developer: creativity, large network (to test &amp; sell the concepts), structured person, risk appetite, passion, easy contact. I would certainly recommend him for such a similar role in a scale-up.</blockquote><figcaption><b>Nicolas Eich</b><span>Son responsable direct chez Meilleurtaux · février 2021</span></figcaption></figure><figure class="rec"><blockquote>Thierry est un expert, c&#x27;est le moins que l&#x27;on puisse dire ! Grâce à son expérience et son analyse il a pu me challenger et m&#x27;accompagner sur tous les aspects liés à ma startup innovante. Chacune de nos interactions ont fait grandir ma startup dans la bonne direction. Une hauteur de vue plus que bienvenue ! Merci Thierry.</blockquote><figcaption><b>Dr Sarah Mellouki</b><span>CEO de Cosmecode, cliente · avril 2021</span></figcaption></figure><figure class="rec"><blockquote>Inutile de souligner le savoir-faire de Thierry, son background témoigne de son expertise. C&#x27;est son savoir-être et ses valeurs humaines que je souhaite mettre en avant. Thierry allie bienveillance et empathie, de précieuses qualités dans le monde d&#x27;aujourd&#x27;hui.</blockquote><figcaption><b>Mickael Phongsa</b><span>Ex-directeur marketing de Meilleurtaux · avril 2020</span></figcaption></figure><figure class="rec"><blockquote>J&#x27;ai eu l&#x27;opportunité de travailler avec Thierry sur plusieurs métiers et projets. J&#x27;apprécie sa capacité à comprendre et maîtriser son marché, discerner et appréhender ses enjeux et ses contraintes, notamment par le prisme de l&#x27;innovation. Son expérience sur les Entrepreneurs et Professionnels est très large et riche. Son approche de coaching opérationnel est concrète et apporte un vrai plus pour concrétiser vos projets.</blockquote><figcaption><b>Jérôme Prigent</b><span>Managing Director, BCB Europe · mars 2021</span></figcaption></figure><figure class="rec"><blockquote>Thierry est une personne dynamique avec un excellent sens de l’écoute. Ceci lui confère une bonne capacité à définir des objectifs rationnels et positifs pour ses clients. Un professionnel a avoir dans son cercle ! Je le recommande vivement.</blockquote><figcaption><b>Aude Milesi Rotsen</b><span>Conférencière et artiste plasticienne · mars 2021</span></figcaption></figure><figure class="rec"><blockquote>Thierry Garot est une personne qui allie deux qualités essentielles : ouverture sur l’humain et rigueur dans la finance. En pointe sur les technologies digitales, il réalise des prestations sur-mesure pour la recherche de financements d’entreprise.</blockquote><figcaption><b>Jacques Milcent</b><span>Formateur certifié DISC · novembre 2020</span></figcaption></figure><figure class="rec"><blockquote>Un entrepreneur très engagé, porteur de Valeurs Humaines certaines, créatif et imaginatif, compétent et sympathique. Thierry Garot est à lui seul un cocktail détonnant avec qui il est agréable de travailler... et en plus je le pense...</blockquote><figcaption><b>Hervé Lambert</b><span>Fondateur de Repriz et d&#x27;Argos · mars 2013</span></figcaption></figure></div>
+    <p><a class="allrec" href="https://www.linkedin.com/in/thierry-garot/details/recommendations/">Voir les 15 recommandations sur LinkedIn</a></p>
   </div>
 </section>
 
@@ -455,6 +478,11 @@ const path=[
  ['2018 – 2020','Pretpro','Responsable des partenariats, à Nantes.'],
  ['Depuis 2020','Entrepreneur indépendant','Inclusio Formation, puis Zone de génie, getLinora et Sillaj, depuis le bord de l\'Atlantique.']
 ];
+const rr=document.getElementById('rrail');
+const rstep=d=>{const c=rr.querySelector('.rec');rr.scrollBy({left:d*((c?c.getBoundingClientRect().width:400)+18),behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'})};
+document.getElementById('rPrev').addEventListener('click',()=>rstep(-1));
+document.getElementById('rNext').addEventListener('click',()=>rstep(1));
+rr.addEventListener('keydown',e=>{if(e.key==='ArrowRight'){e.preventDefault();rstep(1)}if(e.key==='ArrowLeft'){e.preventDefault();rstep(-1)}});
 let deferred=null;
 window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferred=e});
 document.getElementById('installBtn').addEventListener('click',async()=>{
