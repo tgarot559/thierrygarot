@@ -294,6 +294,16 @@ h1,h2,h3{text-wrap:balance}
 p{text-wrap:pretty}
 .btn,.lnk{min-height:48px}
 }
+.res .rgrid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:18px;margin-top:22px}
+.res .rcard{grid-column:span 2}.res .rcard:nth-child(n+4){grid-column:span 3}
+.res .rcard strong sup{font-size:.5em;line-height:0;vertical-align:.75em}
+@media(max-width:900px){.res .rgrid{grid-template-columns:minmax(0,1fr)}.res .rcard,.res .rcard:nth-child(n+4){grid-column:auto}}
+.res .rcard{background:var(--bg);border:1px solid var(--line);border-radius:24px;padding:26px 24px;display:flex;flex-direction:column;gap:8px}
+.res .rcard strong{font-family:Fraunces,Georgia,serif;font-weight:400;font-size:clamp(38px,4.4vw,52px);line-height:1;color:var(--orange)}
+.res .rcard b{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:22px}
+.res .rcard .k{font-size:14px;font-weight:800;color:var(--soft);text-transform:uppercase;letter-spacing:.06em}
+.res .rcard p{color:var(--soft);font-size:16px;margin:0}
+.res .rcard a{color:inherit}
 </style>
 </head>
 <body>
@@ -302,6 +312,7 @@ p{text-wrap:pretty}
   <div class="links">
     <a href="#histoire">My story</a>
     <a href="#strategie">My approach</a>
+    <a href="#resultats">Results</a>
     <a href="#conferences">My talk</a>
     <a href="#charte">My charter</a>
     <a href="#avis">Testimonials</a>
@@ -424,6 +435,20 @@ p{text-wrap:pretty}
       <p class="refs">A TEDx-style talk at SKEMA Business School in Bordeaux · speaking at La Seine Musicale in Paris.</p>
       <div class="btns"><a class="btn hot" href="https://votrezonedegenie.fr/conference/#projet">Tell me about your event (FR)</a><a class="btn ghost" href="https://votrezonedegenie.fr/conference/">See the full programme (FR)</a></div>
       <p class="small">A request does not commit you to anything. You can also message me on <a href="https://www.linkedin.com/in/thierry-garot">LinkedIn</a> or call me on +33 7 56 86 60 00.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band res" id="resultats" aria-labelledby="res-t" style="background:var(--cream)">
+  <div class="wrap">
+    <h2 id="res-t">My results</h2>
+    <p class="lead">Figures rather than adjectives. What my projects have produced, from the first guarantee fund to the seminars signed this year.</p>
+    <div class="rgrid">
+      <div class="rcard"><strong>600</strong><b>loans guaranteed</b><span class="k">Interface · Niort · 2000–2006</span><p>The first pre-guarantee fund: business founders got the guarantee before the loan. Set up with the Caisse des Dépôts and the Caisse d'Épargne. Average guaranteed loan of €37.5k, only 8% losses on a segment seen as fragile. The scheme was later taken up in Aquitaine.</p></div>
+      <div class="rcard"><strong>1<sup>st</sup></strong><b>bank loan via crowdfunding</b><span class="k">Unilend · 2015–2016</span><p>The first loan made by a bank through a crowdfunding platform in continental Europe.</p></div>
+      <div class="rcard"><strong>4<sup>th</sup></strong><b>business line created</b><span class="k">Meilleurtaux · 2016–2018</span><p>Building small-business lending at Meilleurtaux, which became the group's fourth business line, with the launch of meilleurtauxpro.com.</p></div>
+      <div class="rcard"><strong>€19,338</strong><b>in seminars signed</b><span class="k">getLinora · 2026</span><p>For a 35-room hotel on the Atlantic coast: 5 seminars from March to November 2026. <a href="https://getlinora.fr/resultats/">See the detailed case (FR)</a></p></div>
+      <div class="rcard"><strong>8 years</strong><b>serving adoption</b><span class="k">Volunteering · Western France</span><p>Regional leads, with my wife, for the adoption charity through which we adopted: eight départements, future parents supported through the process.</p></div>
     </div>
   </div>
 </section>
