@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Console · thierrygarot.fr</title>
+<link rel="icon" href="/img/icon-192.png">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..600&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0c1033;--navy2:#151b4d;--orange:#F97316;--cream:#FFF7ED;--ink:#1b2140;--soft:#5b6185;--line:#e7e2da;--ok:#1f8a4c;--warn:#c27a00;--bad:#c0392b}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--cream);color:var(--ink);font:16px/1.5 Manrope,system-ui,sans-serif;overflow-x:clip}
+header{background:var(--navy);color:#fff;padding:22px max(5vw,16px) 18px}
+header .top{display:flex;flex-wrap:wrap;gap:12px;align-items:baseline;justify-content:space-between}
+h1{font:500 clamp(26px,3.4vw,38px)/1.1 Fraunces,Georgia,serif;margin:0}
+h1 b{color:var(--orange);font-weight:500}
+header p{margin:6px 0 0;color:#c9ccef;font-size:15px}
+nav.tabs{display:flex;gap:6px;overflow-x:auto;margin-top:16px;padding-bottom:2px}
+nav.tabs a{flex:none;color:#d8dbff;text-decoration:none;font-weight:700;font-size:15px;padding:10px 14px;border-radius:999px;min-height:44px;display:flex;align-items:center}
+nav.tabs a.on{background:var(--orange);color:#fff}
+main{max-width:1240px;margin:0 auto;padding:24px max(4vw,16px) 60px}
+section{display:none}section.on{display:block}
+h2{font:500 26px/1.15 Fraunces,Georgia,serif;margin:6px 0 14px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(9em,1fr));gap:14px;margin-bottom:22px}
+.kpi{background:#fff;border:1px solid var(--line);border-radius:20px;padding:18px}
+.kpi strong{display:block;font:400 clamp(30px,3.6vw,42px)/1 Fraunces,Georgia,serif;color:var(--orange)}
+.kpi span{color:var(--soft);font-size:14px}
+.box{background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px;margin-bottom:18px}
+.box h3{margin:0 0 10px;font-size:17px}
+.row{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-top:1px solid var(--line)}
+.row:first-of-type{border-top:0}
+.dot{flex:none;width:12px;height:12px;border-radius:50%;margin-top:6px;background:var(--soft)}
+.dot.ok{background:var(--ok)}.dot.warn{background:var(--warn)}.dot.bad{background:var(--bad)}
+.row .t{font-weight:700}.row .d{color:var(--soft);font-size:14px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{text-align:left;padding:9px 8px;border-top:1px solid var(--line);vertical-align:top}
+th{font-size:13px;color:var(--soft);border-top:0}
+td.n{text-align:right;white-space:nowrap}
+.pill{display:inline-block;padding:2px 9px;border-radius:999px;font-size:12px;font-weight:800;white-space:nowrap}
+.pill.ok{background:#e3f4ea;color:var(--ok)}.pill.warn{background:#fdf0d9;color:var(--warn)}.pill.bad{background:#fbe3e0;color:var(--bad)}
+a{color:var(--navy2)}
+.links{display:grid;grid-template-columns:repeat(auto-fit,minmax(15em,1fr));gap:12px}
+.links a{display:block;background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px 16px;text-decoration:none;color:var(--ink);min-height:44px}
+.links a:hover,.links a:focus-visible{border-color:var(--orange)}
+.links a b{display:block}.links a span{color:var(--soft);font-size:14px}
+.og{max-width:560px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff}
+.og img{display:block;width:100%;aspect-ratio:1200/630;object-fit:cover;background:#eee}
+.og div{padding:12px 14px}.og small{color:var(--soft)}.og b{display:block;margin:2px 0}
+button{font:inherit;font-weight:800;background:var(--orange);color:#fff;border:0;border-radius:999px;padding:10px 18px;min-height:44px;cursor:pointer}
+button.ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.35)}
+button:focus-visible,a:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
+.muted{color:var(--soft);font-size:14px}
+.scroll{overflow-x:auto}
+@media(max-width:600px){.stack thead{display:none}.stack tr{display:grid;padding-block:8px;border-top:1px solid var(--line)}.stack td{border:0;padding:3px 0}.stack td.n{text-align:left}}
+</style>
+</head>
+<body>
+<header>
+  <div class="top">
+    <div><h1>Console <b>thierrygarot.fr</b></h1><p id="stamp">Analyse du site en cours…</p></div>
+    <button class="ghost" id="reload" type="button">Relancer l'analyse</button>
+  </div>
+  <nav class="tabs" aria-label="Rubriques">
+    <a href="#vue" class="on">Vue d'ensemble</a>
+    <a href="#pages">Pages et référencement</a>
+    <a href="#contenu">Contenu</a>
+    <a href="#liens">Liens</a>
+    <a href="#partage">Partage</a>
+    <a href="#maj">Mises à jour</a>
+    <a href="#outils">Outils</a>
+  </nav>
+</header>
+<main>
+<section id="vue" class="on">
+  <div class="kpis" id="kpis"></div>
+  <div class="box"><h3>État de santé</h3><div id="health"><p class="muted">Vérifications en cours…</p></div></div>
+  <div class="box"><h3>Visites</h3><p class="muted">Le site ne compte pas encore ses visiteurs. Les impressions et les clics sur Google sont dans la Search Console (onglet Outils). Un compteur de visites sans cookies peut être ajouté sur demande.</p></div>
+</section>
+
+<section id="pages">
+  <h2>Pages et référencement</h2>
+  <p class="muted">Chaque page du plan du site est relue en direct : titre, description, image de partage, adresse canonique, titre principal et textes alternatifs des images.</p>
+  <div class="box scroll"><table class="stack"><thead><tr><th>Page</th><th>Titre</th><th class="n">Description</th><th>Contrôles</th><th class="n">Mots</th></tr></thead><tbody id="ptable"></tbody></table></div>
+</section>
+
+<section id="contenu">
+  <h2>Contenu de la page d'accueil</h2>
+  <div class="kpis" id="ckpis"></div>
+  <div class="box"><h3>Sections, dans l'ordre</h3><div id="sections"></div></div>
+  <div class="box"><h3>Mes résultats</h3><div id="results"></div></div>
+  <div class="box"><h3>Recommandations affichées</h3><div id="recs"></div></div>
+</section>
+
+<section id="liens">
+  <h2>Liens</h2>
+  <div class="box"><h3>Liens internes</h3><p class="muted" id="lsum">Vérification en cours…</p><div id="lint"></div></div>
+  <div class="box"><h3>Liens vers l'extérieur</h3><p class="muted">Ces liens ne peuvent pas être testés depuis le site : ils sont listés pour contrôle.</p><div class="scroll"><table><tbody id="lext"></tbody></table></div></div>
+</section>
+
+<section id="partage">
+  <h2>Aperçu quand le lien est partagé</h2>
+  <div class="og" id="og"></div>
+  <p class="muted">LinkedIn garde l'ancien aperçu quelques jours. Pour le rafraîchir : <a href="https://www.linkedin.com/post-inspector/inspect/https:%2F%2Fthierrygarot.fr%2F">Post Inspector de LinkedIn</a> · <a href="https://developers.facebook.com/tools/debug/?q=https%3A%2F%2Fthierrygarot.fr%2F">outil de Facebook</a>.</p>
+</section>
+
+<section id="maj">
+  <h2>Dernières mises à jour</h2>
+  <div class="box"><div id="commits"><p class="muted">Chargement…</p></div></div>
+</section>
+
+<section id="outils">
+  <h2>Outils</h2>
+  <div class="links">
+    <a href="https://search.google.com/search-console/performance/search-analytics?resource_id=sc-domain%3Athierrygarot.fr"><b>Search Console</b><span>Clics, impressions, requêtes Google</span></a>
+    <a href="https://search.google.com/search-console/sitemaps?resource_id=sc-domain%3Athierrygarot.fr"><b>Plan du site sur Google</b><span>État du sitemap</span></a>
+    <a href="https://github.com/tgarot559/thierrygarot"><b>Fichiers du site</b><span>GitHub, thierrygarot.fr</span></a>
+    <a href="https://github.com/tgarot559/thierrygarot/settings/pages"><b>Hébergement et HTTPS</b><span>Réglages GitHub Pages</span></a>
+    <a href="https://admin.gandi.net/domain/"><b>Nom de domaine</b><span>Gandi, thierrygarot.fr</span></a>
+    <a href="https://www.linkedin.com/in/thierry-garot/"><b>Profil LinkedIn</b><span>linkedin.com/in/thierry-garot</span></a>
+    <a href="https://www.linkedin.com/newsletters/ouvrir-la-porte-7527429431049584640/"><b>Newsletter Ouvrir la porte</b><span>LinkedIn</span></a>
+    <a href="https://www.amazon.fr/dp/B0FYFWJ9XP"><b>2037 sur Amazon</b><span>Fiche du roman</span></a>
+    <a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fthierrygarot.fr%2F"><b>Vitesse du site</b><span>PageSpeed Insights</span></a>
+    <a href="https://www.google.com/search?q=site%3Athierrygarot.fr"><b>Pages indexées</b><span>Recherche site:thierrygarot.fr</span></a>
+  </div>
+</section>
+</main>
+<script>
+{
+const $=s=>document.querySelector(s);
+const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const pill=(c,t)=>`<span class="pill ${c}">${esc(t)}</span>`;
+const row=(c,t,d)=>`<div class="row"><span class="dot ${c}"></span><div><div class="t">${esc(t)}</div>${d?`<div class="d">${esc(d)}</div>`:''}</div></div>`;
+const kpi=(n,l)=>`<div class="kpi"><strong>${esc(n)}</strong><span>${esc(l)}</span></div>`;
+const parse=h=>new DOMParser().parseFromString(h,'text/html');
+const meta=(d,sel)=>d.querySelector(sel)?.getAttribute('content')||'';
+
+function tabs(){
+  const id=(location.hash||'#vue').slice(1);
+  document.querySelectorAll('main section').forEach(s=>s.classList.toggle('on',s.id===id));
+  document.querySelectorAll('nav.tabs a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+id));
+}
+addEventListener('hashchange',tabs);tabs();
+
+async function get(u){const r=await fetch(u,{cache:'no-store'});return {ok:r.ok,status:r.status,text:r.ok?await r.text():''}}
+
+async function run(){
+  $('#stamp').textContent='Analyse du site en cours…';
+  const health=[];
+  health.push(location.protocol==='https:'?['ok','Connexion sécurisée (HTTPS) active','Le cadenas s’affiche pour vos visiteurs.']:['bad','Connexion non sécurisée','Le site est ouvert en http.']);
+  let urls=[];
+  try{
+    const sm=await get('/sitemap.xml');
+    urls=[...parse(sm.text).querySelectorAll('loc')].map(l=>new URL(l.textContent.trim()).pathname);
+    health.push(['ok','Plan du site lisible',urls.length+' pages déclarées à Google.']);
+  }catch(e){health.push(['bad','Plan du site illisible',String(e)])}
+  const rb=await get('/robots.txt').catch(()=>({ok:false}));
+  health.push(rb.ok&&/Sitemap:/i.test(rb.text)&&!/Disallow:\s*\/\s*$/m.test(rb.text)?['ok','Google et les IA peuvent lire le site','robots.txt ouvert, plan du site indiqué.']:['warn','robots.txt à vérifier','']);
+  const llm=await get('/llms.txt').catch(()=>({ok:false}));
+  health.push(llm.ok?['ok','Fiche pour les IA présente','llms.txt en ligne.']:['warn','Fiche pour les IA absente','llms.txt introuvable.']);
+
+  const pages=[],internal=new Map(),external=new Map();let words=0,issues=0;
+  for(const p of urls){
+    const r=await get(p).catch(()=>({ok:false,status:0,text:''}));
+    const d=parse(r.text);
+    const title=d.title||'',desc=meta(d,'meta[name=description]');
+    const checks=[];
+    const add=(ok,label)=>{checks.push(pill(ok?'ok':'warn',label));if(!ok)issues++};
+    if(!r.ok){checks.push(pill('bad','Erreur '+r.status));issues++}
+    add(title.length>=20&&title.length<=65,'Titre '+title.length+' car.');
+    add(desc.length>=70&&desc.length<=165,'Description');
+    add(!!meta(d,'meta[property="og:image"]'),'Image de partage');
+    add(!!d.querySelector('link[rel=canonical]'),'Canonique');
+    add(d.querySelectorAll('h1').length===1,'1 titre principal');
+    const noalt=[...d.querySelectorAll('img')].filter(i=>!i.hasAttribute('alt')).length;
+    add(noalt===0,noalt?noalt+' image(s) sans texte alt':'Textes alt');
+    const w=(d.body?.innerText||d.body?.textContent||'').split(/\s+/).filter(Boolean).length;words+=w;
+    pages.push({p,title,desc,checks,w});
+    d.querySelectorAll('a[href]').forEach(a=>{
+      const h=a.getAttribute('href');if(!h||h.startsWith('#')||/^(mailto|tel|javascript):/.test(h))return;
+      const u=new URL(h,location.origin+p);
+      if(u.origin===location.origin){const k=u.pathname;if(!internal.has(k))internal.set(k,new Set());internal.get(k).add(p)}
+      else{const k=u.href;if(!external.has(k))external.set(k,new Set());external.get(k).add(p)}
+    });
+  }
+  $('#ptable').innerHTML=pages.map(x=>`<tr><td><a href="${esc(x.p)}">${esc(x.p)}</a></td><td>${esc(x.title)}</td><td class="n">${x.desc.length} car.</td><td>${x.checks.join(' ')}</td><td class="n">${x.w.toLocaleString('fr-FR')}</td></tr>`).join('');
+
+  let broken=[];
+  for(const [k,from] of internal){
+    const r=await fetch(k,{method:'HEAD',cache:'no-store'}).catch(()=>({ok:false,status:0}));
+    if(!r.ok)broken.push([k,[...from]]);
+  }
+  $('#lsum').textContent=internal.size+' liens internes testés, '+(broken.length?broken.length+' cassé(s).':'aucun cassé.');
+  $('#lint').innerHTML=broken.length?broken.map(([k,f])=>row('bad',k,'Présent sur : '+f.join(', '))).join(''):row('ok','Tous les liens internes répondent','');
+  $('#lext').innerHTML=[...external].sort().map(([k,f])=>`<tr><td><a href="${esc(k)}">${esc(k.replace(/^https?:\/\//,''))}</a></td><td class="muted">${esc([...f].join(', '))}</td></tr>`).join('');
+  health.push(broken.length?['bad',broken.length+' lien(s) interne(s) cassé(s)','Voir l’onglet Liens.']:['ok','Aucun lien cassé',internal.size+' liens internes testés.']);
+  health.push(issues?['warn',issues+' point(s) de référencement à revoir','Voir l’onglet Pages et référencement.']:['ok','Référencement des pages complet','Titres, descriptions, images et canoniques en place.']);
+
+  // Accueil
+  const home=parse((await get('/')).text);
+  const secs=[...home.querySelectorAll('main section, body > section')];
+  const res=[...home.querySelectorAll('#resultats .rcard')];
+  const recs=[...home.querySelectorAll('#avis figure.rec')];
+  const arts=parse((await get('/articles/').catch(()=>({text:''}))).text).querySelectorAll('a[href$=".html"]').length;
+  $('#sections').innerHTML=secs.map(s=>{const h=s.querySelector('h2');return row('ok',h?h.textContent.trim():(s.getAttribute('aria-label')||s.className),s.id?'#'+s.id:'')}).join('');
+  $('#results').innerHTML=res.length?res.map(c=>row('ok',c.querySelector('strong')?.textContent.trim()+' '+(c.querySelector('b')?.textContent.trim()||''),c.querySelector('.k')?.textContent.trim())).join(''):row('warn','Aucun résultat trouvé','');
+  $('#recs').innerHTML=recs.map(r=>row('ok',r.querySelector('figcaption b')?.textContent.trim(),r.querySelector('figcaption span')?.textContent.trim())).join('');
+  $('#ckpis').innerHTML=kpi(secs.length,'sections')+kpi(res.length,'résultats chiffrés')+kpi(recs.length,'recommandations')+kpi(arts,'articles publiés');
+  $('#kpis').innerHTML=kpi(urls.length,'pages en ligne')+kpi(arts,'articles')+kpi(recs.length,'recommandations')+kpi(res.length,'résultats chiffrés')+kpi(words.toLocaleString('fr-FR'),'mots au total');
+
+  // Partage
+  const ogi=meta(home,'meta[property="og:image"]');
+  $('#og').innerHTML=`<img alt="Image de partage" src="${esc(ogi?new URL(ogi).pathname+'?t='+Date.now():'')}"><div><small>thierrygarot.fr</small><b>${esc(meta(home,'meta[property="og:title"]'))}</b><small>${esc(meta(home,'meta[property="og:description"]'))}</small></div>`;
+
+  $('#health').innerHTML=health.map(h=>row(...h)).join('');
+  $('#stamp').textContent='Analyse du '+new Date().toLocaleString('fr-FR',{dateStyle:'long',timeStyle:'short'});
+}
+
+async function commits(){
+  try{
+    const r=await fetch('https://api.github.com/repos/tgarot559/thierrygarot/commits?per_page=15');
+    const list=await r.json();if(!Array.isArray(list))throw 0;
+    $('#commits').innerHTML=list.map(c=>row('ok',c.commit.message.split('\n')[0],new Date(c.commit.author.date).toLocaleString('fr-FR',{dateStyle:'medium',timeStyle:'short'}))).join('');
+  }catch(e){$('#commits').innerHTML='<p class="muted">Historique indisponible pour le moment. <a href="https://github.com/tgarot559/thierrygarot/commits/main">Voir sur GitHub</a></p>'}
+}
+$('#reload').addEventListener('click',()=>{run();commits()});
+run();commits();
+}
+</script>
+</body>
+</html>
