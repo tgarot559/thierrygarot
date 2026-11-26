@@ -67,6 +67,7 @@ nav .brand b{color:var(--orange);font-weight:400}
 nav .links{display:flex;flex-wrap:wrap;gap:4px 18px}
 nav .links a{text-decoration:none;font-size:15px;font-weight:700;color:#d8dbff;padding:6px 0}
 nav .links a:hover,nav .links a:focus-visible{color:var(--orange)}
+nav .links{align-items:center}nav .links a.navcta{background:var(--orange);color:#fff;padding:7px 16px;border-radius:999px}nav .links a.navcta:hover,nav .links a.navcta:focus-visible{background:#fff;color:var(--navy2)}
 .hero{background:radial-gradient(120% 90% at 80% 0%,#1f2878 0%,var(--navy) 45%,var(--navy2) 100%);color:#fff;padding-bottom:0}
 .hero .name{font-size:clamp(52px,9vw,112px);line-height:.98;letter-spacing:-.005em}
 .hero .name span{color:var(--orange)}
@@ -315,14 +316,9 @@ p{text-wrap:pretty}
     <a href="#histoire">My story</a>
     <a href="#strategie">My approach</a>
     <a href="#resultats">Results</a>
-    <a href="#conferences">My talk</a>
-    <a href="#charte">My charter</a>
     <a href="#avis">Testimonials</a>
-    <a href="#parcours">Career</a>
     <a href="../articles/" hreflang="fr">Articles (FR)</a>
-    <a href="#roman">My novel</a>
-    <a href="press/">Press</a>
-    <a href="#contact">Contact</a>
+    <a class="navcta" href="#contact">Contact me</a>
     <a class="lang" href="../" hreflang="fr" lang="fr">FR</a>
   </div>
 </nav>
@@ -565,6 +561,7 @@ p{text-wrap:pretty}
 <footer class="band" style="padding-block:28px">
   <div class="wrap">
     <span>Made by Thierry, on the Atlantic coast.</span>
+    <span class="sec"><a href="#conferences">My talk</a> · <a href="#charte">My charter</a> · <a href="#parcours">Career</a> · <a href="#roman">My novel</a></span>
     <span class="inst"><button type="button" id="installBtn">Install the app on my phone</button><small id="installTip" hidden>On iPhone: tap Share, then “Add to Home Screen”. On Android: menu ⋮, then “Install app”.</small></span>
     <span><a href="https://votrezonedegenie.fr">Zone de génie</a> · <a href="https://getlinora.fr">getLinora</a> · <a href="https://sillaj.me">Sillaj</a> · <a href="https://inclusio-formation.com">Inclusio Formation</a> · <a href="https://www.amazon.fr/dp/B0FYFWJ9XP">2037</a> · <a href="press/">Press and speaking</a></span>
   </div>
