@@ -67,6 +67,7 @@ nav .brand b{color:var(--orange);font-weight:400}
 nav .links{display:flex;flex-wrap:wrap;gap:4px 18px}
 nav .links a{text-decoration:none;font-size:15px;font-weight:700;color:#d8dbff;padding:6px 0}
 nav .links a:hover,nav .links a:focus-visible{color:var(--orange)}
+nav .links{align-items:center}nav .links a.navcta{background:var(--orange);color:#fff;padding:7px 16px;border-radius:999px}nav .links a.navcta:hover,nav .links a.navcta:focus-visible{background:#fff;color:var(--navy2)}
 .hero{background:radial-gradient(120% 90% at 80% 0%,#1f2878 0%,var(--navy) 45%,var(--navy2) 100%);color:#fff;padding-bottom:0}
 .hero .name{font-size:clamp(52px,9vw,112px);line-height:.98;letter-spacing:-.005em}
 .hero .name span{color:var(--orange)}
@@ -315,14 +316,9 @@ p{text-wrap:pretty}
     <a href="#histoire">Mon histoire</a>
     <a href="#strategie">Ma stratégie</a>
     <a href="#resultats">Résultats</a>
-    <a href="#conferences">Conférence</a>
-    <a href="#charte">Ma charte</a>
     <a href="#avis">Avis</a>
-    <a href="#parcours">Parcours</a>
     <a href="articles/">Articles</a>
-    <a href="#roman">Mon roman</a>
-    <a href="presse/">Presse</a>
-    <a href="#contact">Contact</a>
+    <a class="navcta" href="#contact">Me contacter</a>
     <a class="lang" href="en/" hreflang="en" lang="en">EN</a>
   </div>
 </nav>
@@ -566,6 +562,7 @@ p{text-wrap:pretty}
 <footer class="band" style="padding-block:28px">
   <div class="wrap">
     <span>Fait par Thierry, au bord de l'Atlantique.</span>
+    <span class="sec"><a href="#conferences">Conférence</a> · <a href="#charte">Ma charte</a> · <a href="#parcours">Parcours</a> · <a href="#roman">Mon roman</a></span>
     <span class="inst"><button type="button" id="installBtn">Installer l'app sur mon téléphone</button><small id="installTip" hidden>Sur iPhone : touchez Partager, puis « Sur l'écran d'accueil ». Sur Android : menu ⋮, puis « Installer l'application ».</small></span>
     <span><a href="https://votrezonedegenie.fr">Zone de génie</a> · <a href="https://getlinora.fr">getLinora</a> · <a href="https://sillaj.me">Sillaj</a> · <a href="https://inclusio-formation.com">Inclusio Formation</a> · <a href="https://www.amazon.fr/dp/B0FYFWJ9XP">2037</a> · <a href="livre/">Le nouveau livre</a> · <a href="presse/">Presse et conférences</a></span>
   </div>
