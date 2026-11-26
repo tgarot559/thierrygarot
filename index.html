@@ -294,6 +294,16 @@ h1,h2,h3{text-wrap:balance}
 p{text-wrap:pretty}
 .btn,.lnk{min-height:48px}
 }
+.res .rgrid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:18px;margin-top:22px}
+.res .rcard{grid-column:span 2}.res .rcard:nth-child(n+4){grid-column:span 3}
+.res .rcard strong sup{font-size:.5em;line-height:0;vertical-align:.75em}
+@media(max-width:900px){.res .rgrid{grid-template-columns:minmax(0,1fr)}.res .rcard,.res .rcard:nth-child(n+4){grid-column:auto}}
+.res .rcard{background:var(--bg);border:1px solid var(--line);border-radius:24px;padding:26px 24px;display:flex;flex-direction:column;gap:8px}
+.res .rcard strong{font-family:Fraunces,Georgia,serif;font-weight:400;font-size:clamp(38px,4.4vw,52px);line-height:1;color:var(--orange)}
+.res .rcard b{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:22px}
+.res .rcard .k{font-size:14px;font-weight:800;color:var(--soft);text-transform:uppercase;letter-spacing:.06em}
+.res .rcard p{color:var(--soft);font-size:16px;margin:0}
+.res .rcard a{color:inherit}
 </style>
 </head>
 <body>
@@ -302,6 +312,7 @@ p{text-wrap:pretty}
   <div class="links">
     <a href="#histoire">Mon histoire</a>
     <a href="#strategie">Ma stratégie</a>
+    <a href="#resultats">Résultats</a>
     <a href="#conferences">Conférence</a>
     <a href="#charte">Ma charte</a>
     <a href="#avis">Avis</a>
@@ -421,9 +432,23 @@ p{text-wrap:pretty}
         <li><b>Réseau de dirigeants</b><span>Prendre du recul sur sa propre contribution et découvrir le regard des autres.</span></li>
       </ul>
       <h3 class="ch">Déjà sur scène</h3>
-      <p class="refs">Intervention de type TEDx à l'SKEMA Business School de Bordeaux · prise de parole à la Seine Musicale, à Paris.</p>
+      <p class="refs">Intervention de type TEDx à la SKEMA Business School de Bordeaux · prise de parole à la Seine Musicale, à Paris.</p>
       <div class="btns"><a class="btn hot" href="https://votrezonedegenie.fr/conference/#projet">Parlons de votre événement</a><a class="btn ghost" href="https://votrezonedegenie.fr/conference/">Voir le déroulé complet</a></div>
       <p class="small">La demande ne vous engage pas. Vous pouvez aussi m'écrire sur <a href="https://www.linkedin.com/in/thierry-garot">LinkedIn</a> ou m'appeler au 07 56 86 60 00.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band res" id="resultats" aria-labelledby="res-t" style="background:var(--cream)">
+  <div class="wrap">
+    <h2 id="res-t">Mes résultats</h2>
+    <p class="lead">Des chiffres plutôt que des adjectifs. Ce que mes projets ont produit, du premier fonds de garantie aux séminaires signés cette année.</p>
+    <div class="rgrid">
+      <div class="rcard"><strong>600</strong><b>dossiers garantis</b><span class="k">Interface · Niort · 2000–2006</span><p>Le premier fonds de pré-garantie : le créateur d'entreprise obtenait la garantie avant le crédit. Monté avec la Caisse des Dépôts et la Caisse d'Épargne. Prêt moyen garanti de 37,5 k€, 8 % de pertes seulement sur une cible réputée fragile. Le dispositif a ensuite été repris en Aquitaine.</p></div>
+      <div class="rcard"><strong>1<sup>er</sup></strong><b>prêt d'une banque en crowdfunding</b><span class="k">Unilend · 2015–2016</span><p>Le premier prêt d'une banque sur une plateforme de financement participatif en Europe continentale.</p></div>
+      <div class="rcard"><strong>4<sup>e</sup></strong><b>métier créé dans le groupe</b><span class="k">Meilleurtaux · 2016–2018</span><p>La création du financement des professionnels chez Meilleurtaux, devenu le quatrième métier du groupe, avec le lancement de meilleurtauxpro.com.</p></div>
+      <div class="rcard"><strong>19 338 €</strong><b>de séminaires signés</b><span class="k">getLinora · 2026</span><p>Pour un hôtel de 35 chambres sur la côte atlantique : 5 séminaires de mars à novembre 2026. <a href="https://getlinora.fr/resultats/">Voir le cas détaillé</a></p></div>
+      <div class="rcard"><strong>8 ans</strong><b>au service de l'adoption</b><span class="k">Bénévolat · Ouest de la France</span><p>Responsables régionaux, avec mon épouse, de l'œuvre par laquelle nous avons adopté : huit départements, des futurs parents accompagnés dans leurs démarches.</p></div>
     </div>
   </div>
 </section>
@@ -467,7 +492,7 @@ p{text-wrap:pretty}
       <h3>Sur scène et à l'écrit</h3>
       <ul>
         <li>Conférence participative Votre Zone de Génie, pour les entreprises et les réseaux.</li>
-        <li>Intervention de type TEDx à l'SKEMA Business School de Bordeaux.</li>
+        <li>Intervention de type TEDx à la SKEMA Business School de Bordeaux.</li>
         <li>Prise de parole à la Seine Musicale, à Paris.</li>
         <li>Auteur de « 2037 » et de « <a href="livre/" style="color:#ffcfa8">J'ai encore des choses à dire</a> », à paraître.</li>
         <li>Expert de l'accessibilité numérique (RGAA, European Accessibility Act), avec <a href="https://inclusio-formation.com" style="color:#ffcfa8">Inclusio Formation</a>.</li>
