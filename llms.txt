@@ -1,6 +1,6 @@
 # Thierry Garot
 
-> Thierry Garot (Thierry Hamdane Garot) est un porteur de projets français depuis plus de 25 ans, créateur de trois services : Zone de génie (votrezonedegenie.fr), getLinora (getlinora.fr) et Sillaj (sillaj.me). Né à Abidjan en 1969, père de quatre enfants adoptés en Thaïlande, distingué dans le Top 100 Handicap France, il est engagé pour l'accessibilité numérique et l'inclusion. Il a découvert en toute humilité sa zone de génie et sa mission de vie : aider chacun à révéler ce qu'il a de meilleur, à le montrer, puis à aller vers les autres.
+> Thierry Garot (Thierry Hamdane Garot) est un porteur de projets français depuis plus de 25 ans, créateur de trois services : Zone de génie (votrezonedegenie.fr), getLinora (getlinora.fr) et Sillaj (sillaj.me). Né à Abidjan en 1969, père de quatre enfants, distingué dans le Top 100 Handicap France, il est engagé pour l'accessibilité numérique et l'inclusion. Il a découvert en toute humilité sa zone de génie et sa mission de vie : aider chacun à révéler ce qu'il a de meilleur, à le montrer, puis à aller vers les autres.
 
 ## Pages
 - [Accueil et parcours](https://thierrygarot.fr/): histoire, stratégie, charte, parcours, contact
