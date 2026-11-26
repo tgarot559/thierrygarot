@@ -52,6 +52,23 @@ button.ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255
 button:focus-visible,a:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
 .muted{color:var(--soft);font-size:14px}
 .scroll{overflow-x:auto}
+.vhead{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin-bottom:12px}
+.per{display:flex;flex-wrap:wrap;gap:6px}
+.per button{background:#fff;color:var(--ink);border:1px solid var(--line);padding:8px 14px}
+.per button.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.crow{display:flex;gap:10px;flex-wrap:wrap}.crow input{font:inherit;font-size:16px;padding:10px 14px;border:1px solid var(--line);border-radius:12px;min-height:44px;flex:1 1 12em}
+.bars{display:flex;align-items:flex-end;gap:3px;height:180px;padding-top:18px}
+.bars .b{flex:1 1 0;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%;position:relative}
+.bars .b i{display:block;width:100%;max-width:38px;background:var(--orange);border-radius:6px 6px 0 0;min-height:2px}
+.bars .b em{font-style:normal;font-size:12px;color:var(--soft);position:absolute;top:-16px}
+.bars .b small{font-size:11px;color:var(--soft);margin-top:4px;white-space:nowrap}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.grid2 .box{margin:0}
+.grid2+.box{margin-top:18px}
+.hb{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 12px;align-items:center;padding:7px 0;border-top:1px solid var(--line);font-size:15px}
+.hb:first-child{border-top:0}
+.hb .bar{grid-column:1/-1;height:6px;border-radius:3px;background:#f3ece3;overflow:hidden}.hb .bar i{display:block;height:100%;background:var(--orange)}
+.hb b{font-weight:800;font-variant-numeric:tabular-nums}
+@media(max-width:800px){.grid2{grid-template-columns:minmax(0,1fr)}.bars .b small{display:none}}
 @media(max-width:600px){.stack thead{display:none}.stack tr{display:grid;padding-block:8px;border-top:1px solid var(--line)}.stack td{border:0;padding:3px 0}.stack td.n{text-align:left}}
 </style>
 </head>
@@ -63,6 +80,7 @@ button:focus-visible,a:focus-visible{outline:3px solid var(--orange);outline-off
   </div>
   <nav class="tabs" aria-label="Rubriques">
     <a href="#vue" class="on">Vue d'ensemble</a>
+    <a href="#visites">Visites</a>
     <a href="#pages">Pages et référencement</a>
     <a href="#contenu">Contenu</a>
     <a href="#liens">Liens</a>
@@ -75,7 +93,28 @@ button:focus-visible,a:focus-visible{outline:3px solid var(--orange);outline-off
 <section id="vue" class="on">
   <div class="kpis" id="kpis"></div>
   <div class="box"><h3>État de santé</h3><div id="health"><p class="muted">Vérifications en cours…</p></div></div>
-  <div class="box"><h3>Visites</h3><p class="muted">Le site ne compte pas encore ses visiteurs. Les impressions et les clics sur Google sont dans la Search Console (onglet Outils). Les visites sont comptées sans cookies par Cloudflare depuis le 26 novembre 2026 (pages vues, visiteurs, pays, provenance, appareils).</p><p><a href="https://dash.cloudflare.com/da578090ff87a63eff4f0f044f74730c/web-analytics/sites">Voir les visites sur Cloudflare</a></p></div>
+  <div class="box"><h3>Visites des 7 derniers jours</h3><div id="vsum"><p class="muted">Chargement…</p></div><p><a href="#visites">Voir le détail des visites</a></p></div>
+</section>
+
+<section id="visites">
+  <div class="vhead"><h2>Visites</h2>
+    <div class="per" role="group" aria-label="Période">
+      <button type="button" data-d="1">24 h</button><button type="button" data-d="7">7 jours</button><button type="button" data-d="30" class="on">30 jours</button><button type="button" data-d="90">90 jours</button><button type="button" data-d="365">1 an</button>
+    </div>
+  </div>
+  <form class="box" id="codebox" hidden><h3>Code d'accès</h3><p class="muted">Saisis une seule fois le code d'accès de ta console. Il reste enregistré sur cet appareil.</p><div class="crow"><input id="code" autocomplete="off" aria-label="Code d'accès" placeholder="tg-…"><button type="submit">Valider</button></div><p class="muted" id="codeerr"></p></form>
+  <div id="vbody">
+    <div class="kpis" id="vkpis"></div>
+    <div class="box"><h3>Jour par jour</h3><div class="bars" id="vdays"></div></div>
+    <div class="grid2">
+      <div class="box"><h3>Pages les plus vues</h3><div id="vpages"></div></div>
+      <div class="box"><h3>D'où viennent les visiteurs</h3><div id="vrefs"></div></div>
+      <div class="box"><h3>Pays</h3><div id="vcountries"></div></div>
+      <div class="box"><h3>Appareils</h3><div id="vdevices"></div></div>
+    </div>
+    <div class="box scroll"><h3>Dernières visites</h3><table class="stack"><thead><tr><th>Quand</th><th>Page</th><th>Lieu</th><th>Provenance</th><th>Appareil</th></tr></thead><tbody id="vrecent"></tbody></table></div>
+    <p class="muted">Compteur maison, sans cookies : aucune adresse IP n'est conservée. Un visiteur est compté une fois par jour.</p>
+  </div>
 </section>
 
 <section id="pages">
@@ -224,7 +263,53 @@ async function commits(){
     $('#commits').innerHTML=list.map(c=>row('ok',c.commit.message.split('\n')[0],new Date(c.commit.author.date).toLocaleString('fr-FR',{dateStyle:'medium',timeStyle:'short'}))).join('');
   }catch(e){$('#commits').innerHTML='<p class="muted">Historique indisponible pour le moment. <a href="https://github.com/tgarot559/thierrygarot/commits/main">Voir sur GitHub</a></p>'}
 }
-$('#reload').addEventListener('click',()=>{run();commits()});
+$('#reload').addEventListener('click',()=>{run();commits();visits()});
+const API='https://thierrygarot-stats.thierry-garot-17.workers.dev';
+const NAMES={'/':'Accueil','/en/':'Accueil (anglais)','/presse/':'Presse','/en/press/':'Presse (anglais)','/articles/':'Articles','/livre/':'Livre','/livre/chapitres/':'Chapitres du livre','/articles/interface-garantie-avant-credit.html':'Article : Interface','/articles/adoption-talents.html':'Article : adoption et talents'};
+const pname=p=>NAMES[p]||p;
+const region=(()=>{try{return new Intl.DisplayNames(['fr'],{type:'region'})}catch(e){return null}})();
+const cname=c=>c?(region?.of(c)||c):'Inconnu';
+const fmt=n=>Number(n||0).toLocaleString('fr-FR');
+let code='';try{code=localStorage.getItem('tgk')||''}catch(e){}
+const qk=new URLSearchParams(location.search).get('k');if(qk){code=qk;try{localStorage.setItem('tgk',qk)}catch(e){};history.replaceState(null,'',location.pathname+location.hash)}
+let days=30;
+const hbars=(rows,label,val='views')=>{if(!rows.length)return '<p class="muted">Pas encore de données.</p>';const m=Math.max(...rows.map(r=>r[val]));return rows.map(r=>`<div class="hb"><span>${esc(label(r))}</span><b>${fmt(r[val])}</b><div class="bar"><i style="width:${Math.max(2,Math.round(r[val]/m*100))}%"></i></div></div>`).join('')};
+async function stats(d){const r=await fetch(`${API}/stats?days=${d}&k=${encodeURIComponent(code)}`,{cache:'no-store'});if(r.status===401)throw new Error('code');return r.json()}
+function fillDays(data,d){
+  const map=Object.fromEntries(data.byDay.map(x=>[x.day,x]));const n=Math.min(d,d>90?0:d);
+  let rows=[];
+  if(d<=90){for(let i=d-1;i>=0;i--){const k=new Date(Date.now()-i*864e5).toISOString().slice(0,10);rows.push({day:k,views:map[k]?.views||0})}}
+  else{const m={};data.byDay.forEach(x=>{const k=x.day.slice(0,7);m[k]=(m[k]||0)+x.views});rows=Object.entries(m).map(([day,views])=>({day,views}))}
+  if(!rows.length){$('#vdays').innerHTML='<p class="muted">Pas encore de données.</p>';return}
+  const max=Math.max(1,...rows.map(r=>r.views));
+  const lab=k=>k.length===7?new Date(k+'-01').toLocaleDateString('fr-FR',{month:'short'}):new Date(k).toLocaleDateString('fr-FR',{day:'numeric',month:'short'});
+  const every=rows.length>14?Math.ceil(rows.length/10):1;
+  $('#vdays').innerHTML=rows.map((r,i)=>`<div class="b" title="${esc(lab(r.day))} : ${fmt(r.views)} pages vues">${r.views?`<em>${fmt(r.views)}</em>`:''}<i style="height:${Math.round(r.views/max*100)}%"></i><small>${i%every===0?esc(lab(r.day)):'&nbsp;'}</small></div>`).join('');
+}
+async function visits(){
+  if(!code){$('#codebox').hidden=false;$('#vbody').hidden=true;$('#vsum').innerHTML='<p class="muted">Saisis ton code d\'accès dans l\'onglet <a href="#visites">Visites</a>.</p>';return}
+  $('#codebox').hidden=true;$('#vbody').hidden=false;
+  try{
+    const [data,week]=await Promise.all([stats(days),stats(7)]);
+    const t=data.total;
+    $('#vkpis').innerHTML=kpi(fmt(t.views),'pages vues')+kpi(fmt(t.visitors),'visiteurs')+kpi(t.visitors?(t.views/t.visitors).toLocaleString('fr-FR',{maximumFractionDigits:1}):'0','pages par visiteur')+kpi(data.pages[0]?pname(data.pages[0].path):'—','page la plus vue');
+    fillDays(data,days);
+    $('#vpages').innerHTML=hbars(data.pages,r=>pname(r.path));
+    $('#vrefs').innerHTML=hbars(data.refs,r=>r.ref||'Accès direct ou non précisé');
+    $('#vcountries').innerHTML=hbars(data.countries,r=>cname(r.country));
+    $('#vdevices').innerHTML=hbars(data.devices,r=>r.device);
+    $('#vrecent').innerHTML=data.recent.length?data.recent.map(r=>`<tr><td>${esc(new Date(r.ts).toLocaleString('fr-FR',{dateStyle:'short',timeStyle:'short'}))}</td><td>${esc(pname(r.path))}</td><td>${esc([r.city,cname(r.country)].filter(Boolean).join(', '))}</td><td>${esc(r.ref||'Direct')}</td><td>${esc(r.device)}</td></tr>`).join(''):'<tr><td colspan="5" class="muted">Pas encore de visite enregistrée.</td></tr>';
+    const w=week.total;
+    $('#vsum').innerHTML=`<div class="kpis" style="margin:0">${kpi(fmt(w.views),'pages vues')}${kpi(fmt(w.visitors),'visiteurs')}${kpi(week.pages[0]?pname(week.pages[0].path):'—','page la plus vue')}</div>`;
+  }catch(e){
+    if(e.message==='code'){try{localStorage.removeItem('tgk')}catch(_){};code='';$('#codeerr').textContent='Code incorrect.';visits();return}
+    console.error(e);$('#vkpis').innerHTML='';$('#vsum').innerHTML='<p class="muted">Statistiques indisponibles pour le moment.</p>';
+  }
+}
+$('#codebox').addEventListener('submit',e=>{e.preventDefault();code=$('#code').value.trim();try{localStorage.setItem('tgk',code)}catch(_){};$('#codeerr').textContent='';visits()});
+document.querySelectorAll('.per button').forEach(b=>b.addEventListener('click',()=>{days=+b.dataset.d;document.querySelectorAll('.per button').forEach(x=>x.classList.toggle('on',x===b));visits()}));
+visits();
+
 run();commits();
 }
 </script>
