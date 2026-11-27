@@ -305,6 +305,16 @@ p{text-wrap:pretty}
 .res .rcard .k{font-size:14px;font-weight:800;color:var(--soft);text-transform:uppercase;letter-spacing:.06em}
 .res .rcard p{color:var(--soft);font-size:16px;margin:0}
 .res .rcard a{color:inherit}
+.sport{background:var(--cream)}
+.sport .sgrid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(22px,4vw,56px);align-items:center}
+.sport .k{font-size:14px;font-weight:800;color:var(--orange);letter-spacing:.02em}
+.scard{display:flex;flex-direction:column;gap:12px;padding:28px 24px;border-radius:24px;background:#0e3a78;color:#fff;text-decoration:none;border:2px solid transparent;transition:border-color .2s,transform .2s}
+.scard:hover,.scard:focus-visible{border-color:var(--orange);transform:translateY(-2px)}
+.scard .ball{width:44px;height:44px;border-radius:50%;background:#d6f03f;box-shadow:inset -6px -6px 0 rgba(0,0,0,.12)}
+.scard b{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:clamp(24px,2.6vw,30px);line-height:1.15}
+.scard span:not(.go):not(.ball){color:#d7e3ff;font-size:16px}
+.scard .go{margin-top:6px;align-self:flex-start;background:var(--orange);color:#1a0e00;font-weight:800;font-size:15px;padding:10px 18px;border-radius:999px}
+@media(max-width:900px){.sport .sgrid{grid-template-columns:minmax(0,1fr)}}
 </style>
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "925ede43cc304aaf8a6ef513f17c56c9"}'></script><!-- End Cloudflare Web Analytics -->
 <script>(function(){try{var u='https://thierrygarot-stats.thierry-garot-17.workers.dev/hit',d=JSON.stringify({p:location.pathname,r:document.referrer,l:navigator.language});if(navigator.sendBeacon){navigator.sendBeacon(u,d)}else{fetch(u,{method:'POST',body:d,keepalive:true})}}catch(e){}})();</script>
@@ -536,6 +546,18 @@ p{text-wrap:pretty}
   </div>
 </section>
 
+<section class="band sport" id="sport" aria-labelledby="sport-t">
+  <div class="wrap sgrid">
+    <div>
+      <span class="k">Sport passion</span>
+      <h2 id="sport-t">Le pickleball, ma bouffée d'air</h2>
+      <p class="lead">Je joue régulièrement au pickleball. Un sport qu'on apprend en une après-midi, qui se joue à tout âge et où l'on finit toujours par discuter au filet.</p>
+      <p>À force d'en parler autour de moi, j'ai voulu partager ce que j'apprends sur le terrain. C'est devenu Pickleball du Jour : un conseil pratique chaque jour, l'actualité du pickleball en France et ailleurs, et les tournois près de chez vous.</p>
+    </div>
+    <a class="scard" href="https://pickleballdujour.fr/"><span class="ball" aria-hidden="true"></span><b>Pickleball du Jour</b><span>Un conseil par jour, une lettre gratuite le dimanche et un moteur de recherche de tournois locaux. En français et en anglais.</span><span class="go">Découvrir pickleballdujour.fr</span></a>
+  </div>
+</section>
+
 <section class="band follow" aria-labelledby="follow-t">
   <div class="wrap">
     <h2 id="follow-t">Restons en lien</h2>
@@ -562,7 +584,7 @@ p{text-wrap:pretty}
 <footer class="band" style="padding-block:28px">
   <div class="wrap">
     <span>Fait par Thierry, au bord de l'Atlantique.</span>
-    <span class="sec"><a href="#conferences">Conférence</a> · <a href="#charte">Ma charte</a> · <a href="#parcours">Parcours</a> · <a href="#roman">Mon roman</a></span>
+    <span class="sec"><a href="#conferences">Conférence</a> · <a href="#charte">Ma charte</a> · <a href="#parcours">Parcours</a> · <a href="#roman">Mon roman</a> · <a href="#sport">Sport passion</a></span>
     <span class="inst"><button type="button" id="installBtn">Installer l'app sur mon téléphone</button><small id="installTip" hidden>Sur iPhone : touchez Partager, puis « Sur l'écran d'accueil ». Sur Android : menu ⋮, puis « Installer l'application ».</small></span>
     <span><a href="https://votrezonedegenie.fr">Zone de génie</a> · <a href="https://getlinora.fr">getLinora</a> · <a href="https://sillaj.me">Sillaj</a> · <a href="https://inclusio-formation.com">Inclusio Formation</a> · <a href="https://www.amazon.fr/dp/B0FYFWJ9XP">2037</a> · <a href="livre/">Le nouveau livre</a> · <a href="presse/">Presse et conférences</a></span>
   </div>
