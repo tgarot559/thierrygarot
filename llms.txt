@@ -6,6 +6,7 @@
 - [Qui est Thierry Garot ?](https://thierrygarot.fr/qui-est-thierry-garot/): fiche courte, questions-réponses factuelles
 - [Accueil et parcours](https://thierrygarot.fr/): histoire, stratégie, charte, parcours, contact
 - [Articles](https://thierrygarot.fr/articles/): un article par semaine
+- [Accessibilité numérique : ce que l'European Accessibility Act change pour votre entreprise](https://thierrygarot.fr/articles/accessibilite-numerique-eaa-entreprises.html)
 - [Presse et conférences](https://thierrygarot.fr/presse/): bio courte, photo, conférence, contact
 - [English version](https://thierrygarot.fr/en/)
 
