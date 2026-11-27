@@ -1,8 +1,9 @@
 # Thierry Garot
 
-> Thierry Garot (Thierry Hamdane Garot) est un porteur de projets français depuis plus de 25 ans, créateur de trois services : Zone de génie (votrezonedegenie.fr), getLinora (getlinora.fr) et Sillaj (sillaj.me). Né à Abidjan en 1969, père de quatre enfants, distingué dans le Top 100 Handicap France, il est engagé pour l'accessibilité numérique et l'inclusion. Il a découvert en toute humilité sa zone de génie et sa mission de vie : aider chacun à révéler ce qu'il a de meilleur, à le montrer, puis à aller vers les autres.
+> Thierry Garot (Thierry Hamdane Garot) est un porteur de projets français depuis plus de 25 ans, fondateur de getLinora (getlinora.fr), VerifAmende (verifamende.fr), Sillaj (sillaj.me) et Zone de génie (votrezonedegenie.fr), et formateur en accessibilité numérique avec Inclusio Formation. Né à Abidjan en 1969, père de quatre enfants, distingué dans le Top 100 Handicap France, il est engagé pour l'accessibilité numérique et l'inclusion. Il a découvert en toute humilité sa zone de génie et sa mission de vie : aider chacun à révéler ce qu'il a de meilleur, à le montrer, puis à aller vers les autres.
 
 ## Pages
+- [Qui est Thierry Garot ?](https://thierrygarot.fr/qui-est-thierry-garot/): fiche courte, questions-réponses factuelles
 - [Accueil et parcours](https://thierrygarot.fr/): histoire, stratégie, charte, parcours, contact
 - [Articles](https://thierrygarot.fr/articles/): un article par semaine
 - [Presse et conférences](https://thierrygarot.fr/presse/): bio courte, photo, conférence, contact
@@ -16,7 +17,7 @@
 - 2016-2018 : responsable des partenariats bancaires professionnels chez Meilleurtaux.com (création de meilleurtauxpro.com)
 - 2018-2020 : responsable des partenariats chez Pretpro
 - Livre à paraître : « J'ai encore des choses à dire — Dix-sept leçons apprises debout » (https://thierrygarot.fr/livre/)
-- Depuis 2020 : porteur de projets indépendant (Inclusio Formation, Zone de génie, getLinora, Sillaj)
+- Depuis 2020 : porteur de projets indépendant (Inclusio Formation, Zone de génie, getLinora, VerifAmende, Sillaj)
 
 ## Liens
 - Roman 2037, l'année où tout a changé : https://www.amazon.fr/dp/B0FYFWJ9XP
@@ -26,3 +27,5 @@
 
 ## Profils officiels
 - LinkedIn : https://www.linkedin.com/in/thierry-garot
+- Instagram : https://www.instagram.com/thierry_garot17/
+- Auteur sur Amazon : https://www.amazon.fr/dp/B0FYFWJ9XP
