@@ -347,7 +347,7 @@ p{text-wrap:pretty}
         <p class="quote">« Moitié couscous, moitié foie gras, avec une tête d'Anglais. »<em>C'est comme ça que je me présente. Et c'est vrai.</em></p>
       </div>
     </div>
-    <div class="fig" id="routeFig" role="img" aria-label="Le fil de ma vie : Abidjan 1969, Périgueux 1976, Niort 2000, Thaïlande 2003, Paris 2016, l'Atlantique 2026"><svg id="route"></svg></div>
+    <div class="fig" id="routeFig" role="img" aria-label="Le fil de ma vie : Abidjan 1969, Périgueux 1976, Niort 2000, Thaïlande 2003, nous six en 2011, Paris 2016, l'Atlantique 2026"><svg id="route"></svg></div>
   </div>
 </header>
 
@@ -381,7 +381,7 @@ p{text-wrap:pretty}
     <div class="fig" role="img" aria-label="Deux parents et quatre enfants, reliés par un fil orange"><svg id="fam"></svg></div>
     <div>
       <h2 id="famille">Père de quatre enfants adoptés</h2>
-      <p class="lead">En décembre 2003, en Thaïlande, nous sommes devenus parents de quatre enfants d'un coup. Du jour au lendemain, nous étions six.</p>
+      <p class="lead">En décembre 2003, en Thaïlande, nous sommes devenus parents : nous sommes rentrés à quatre. En 2011, deux enfants de plus sont arrivés. Depuis, nous sommes six.</p>
       <p>Avec mon épouse, nous avons ensuite été pendant plus de huit ans responsables régionaux de l'œuvre par laquelle nous avions adopté. Huit départements de l'Ouest, des réunions régionales, et beaucoup de futurs parents accompagnés dans leurs démarches.</p>
       <p>Cette aventure m'a appris l'essentiel de ce que je fais aujourd'hui : regarder quelqu'un pour ce qu'il est, pas pour ce qu'on attend de lui. Et l'aider à prendre sa place.</p>
     </div>
@@ -604,7 +604,8 @@ const stops=[
   {y:'1969',p:'Abidjan',t:'Je nais à Treichville'},
   {y:'1976',p:'Périgueux',t:'Le retour, à 7 ans'},
   {y:'2000',p:'Niort',t:'Interface, une première'},
-  {y:'2003',p:'Thaïlande',t:'Nous devenons six'},
+  {y:'2003',p:'Thaïlande',t:'Retour à quatre'},
+  {y:'2011',p:'Thaïlande',t:'Nous sommes six'},
   {y:'2016',p:'Paris',t:'Meilleurtaux Pro'},
   {y:'2026',p:'Atlantique',t:'Mes trois créations'}
 ];
@@ -628,7 +629,7 @@ const drawRoute=()=>{
     let tx,ty,anchor;
     if(narrow){tx=x+(i%2?24:50);ty=y-6;anchor='start'}
     else{anchor='middle';tx=x;ty=i%2?y+44:y-62}
-    lab+=`<g><circle cx="${x}" cy="${y}" r="13" fill="#0c1033" stroke="#F97316" stroke-width="3"/><circle cx="${x}" cy="${y}" r="5" fill="${i===3?'#FFF200':'#F97316'}"/>
+    lab+=`<g><circle cx="${x}" cy="${y}" r="13" fill="#0c1033" stroke="#F97316" stroke-width="3"/><circle cx="${x}" cy="${y}" r="5" fill="${(i===3||i===4)?'#FFF200':'#F97316'}"/>
     <text x="${tx}" y="${ty}" text-anchor="${anchor}" fill="#F97316" style="font-family:Fraunces,Georgia,serif;font-size:24px;font-weight:600">${esc(s.y)}</text>
     <text x="${tx}" y="${ty+21}" text-anchor="${anchor}" fill="#ffffff" font-weight="800" font-size="15">${esc(s.p)}</text>
     <text x="${tx}" y="${ty+40}" text-anchor="${anchor}" fill="#c9ccf5" font-size="14">${esc(s.t)}</text></g>`;
@@ -653,7 +654,7 @@ const drawFam=()=>{
   });
   const d=heads.map((h,i)=>(i?'L':'M')+h[0]+','+h[1]).join(' ');
   g+=`<path d="${d}" fill="none" stroke="#FFF200" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity=".9"/>`;
-  g+=`<text x="${W*.24}" y="${ground+28}" text-anchor="middle" fill="currentColor" font-size="14" font-weight="700">${W<480?'Nous':'Nous deux'}</text><text x="${W*.695}" y="${ground+28}" text-anchor="middle" fill="currentColor" font-size="14" font-weight="700">${W<480?'Nos 4 enfants':'Nos quatre enfants · décembre 2003'}</text>`;
+  g+=`<text x="${W*.24}" y="${ground+28}" text-anchor="middle" fill="currentColor" font-size="14" font-weight="700">${W<480?'Nous':'Nous deux'}</text><text x="${W*.695}" y="${ground+28}" text-anchor="middle" fill="currentColor" font-size="14" font-weight="700">${W<480?'Nos 4 enfants':'Nos quatre enfants · 2003 et 2011'}</text>`;
   fam.innerHTML=g;
 };
 const roFam=new ResizeObserver(drawFam);roFam.observe(fam);
